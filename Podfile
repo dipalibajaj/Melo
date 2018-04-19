@@ -9,6 +9,7 @@ target 'Melo' do
    pod 'Firebase'
    pod 'Firebase/Core'
    pod 'Firebase/Auth'
+   pod 'Firebase/Database'
 
   target 'MeloTests' do
     inherit! :search_paths

@@ -10,8 +10,21 @@
 		104BD33AD4304EF731301F95 /* Pods_MeloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA0DD17F7C0B7972A80D79F /* Pods_MeloUITests.framework */; };
 		18FC1BC1006669430007939A /* Pods_Melo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3682FEBEE0FFB65BC9145C /* Pods_Melo.framework */; };
 		469DA6054B779453D383A53C /* Pods_MeloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058DC0CAD525DC3E1178A6C2 /* Pods_MeloTests.framework */; };
+		F304E7272087DE40006268B8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304E7252087DE40006268B8 /* PostTableViewCell.swift */; };
+		F304E7282087DE40006268B8 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F304E7262087DE40006268B8 /* PostTableViewCell.xib */; };
+		F304E7342087ED53006268B8 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E72A2087ED53006268B8 /* OpenSans-Semibold.ttf */; };
+		F304E7352087ED53006268B8 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E72B2087ED53006268B8 /* OpenSans-Light.ttf */; };
+		F304E7362087ED53006268B8 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E72C2087ED53006268B8 /* OpenSans-Italic.ttf */; };
+		F304E7372087ED53006268B8 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E72D2087ED53006268B8 /* OpenSans-ExtraBold.ttf */; };
+		F304E7382087ED53006268B8 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E72E2087ED53006268B8 /* OpenSans-LightItalic.ttf */; };
+		F304E7392087ED53006268B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E72F2087ED53006268B8 /* OpenSans-Bold.ttf */; };
+		F304E73A2087ED53006268B8 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E7302087ED53006268B8 /* OpenSans-SemiboldItalic.ttf */; };
+		F304E73B2087ED53006268B8 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E7312087ED53006268B8 /* OpenSans-ExtraBoldItalic.ttf */; };
+		F304E73C2087ED53006268B8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E7322087ED53006268B8 /* OpenSans-Regular.ttf */; };
+		F304E73D2087ED53006268B8 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F304E7332087ED53006268B8 /* OpenSans-BoldItalic.ttf */; };
+		F304E7432088375E006268B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304E7422088375E006268B8 /* HomeViewController.swift */; };
+		F304E7462088D205006268B8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304E7452088D205006268B8 /* Post.swift */; };
 		F379C8032084F75D00FEC4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379C8022084F75D00FEC4B9 /* AppDelegate.swift */; };
-		F379C8052084F75D00FEC4B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379C8042084F75D00FEC4B9 /* ViewController.swift */; };
 		F379C8082084F75D00FEC4B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F379C8062084F75D00FEC4B9 /* Main.storyboard */; };
 		F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F379C8092084F75D00FEC4B9 /* Melo.xcdatamodeld */; };
 		F379C80D2084F75E00FEC4B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F379C80C2084F75E00FEC4B9 /* Assets.xcassets */; };
@@ -48,9 +61,22 @@
 		7A3843AE5DD8425ECA29A4A2 /* Pods-MeloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeloTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeloTests/Pods-MeloTests.release.xcconfig"; sourceTree = "<group>"; };
 		894886F9B06893BEEB0BF7E0 /* Pods-MeloUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeloUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeloUITests/Pods-MeloUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3682FEBEE0FFB65BC9145C /* Pods_Melo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Melo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F304E7252087DE40006268B8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		F304E7262087DE40006268B8 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		F304E72A2087ED53006268B8 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		F304E72B2087ED53006268B8 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F304E72C2087ED53006268B8 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		F304E72D2087ED53006268B8 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F304E72E2087ED53006268B8 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		F304E72F2087ED53006268B8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		F304E7302087ED53006268B8 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		F304E7312087ED53006268B8 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		F304E7322087ED53006268B8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F304E7332087ED53006268B8 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F304E7422088375E006268B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F304E7452088D205006268B8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F379C7FF2084F75D00FEC4B9 /* Melo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F379C8022084F75D00FEC4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F379C8042084F75D00FEC4B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F379C8072084F75D00FEC4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F379C80A2084F75D00FEC4B9 /* Melo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Melo.xcdatamodel; sourceTree = "<group>"; };
 		F379C80C2084F75E00FEC4B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,12 +142,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F304E7292087ED53006268B8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F304E72A2087ED53006268B8 /* OpenSans-Semibold.ttf */,
+				F304E72B2087ED53006268B8 /* OpenSans-Light.ttf */,
+				F304E72C2087ED53006268B8 /* OpenSans-Italic.ttf */,
+				F304E72D2087ED53006268B8 /* OpenSans-ExtraBold.ttf */,
+				F304E72E2087ED53006268B8 /* OpenSans-LightItalic.ttf */,
+				F304E72F2087ED53006268B8 /* OpenSans-Bold.ttf */,
+				F304E7302087ED53006268B8 /* OpenSans-SemiboldItalic.ttf */,
+				F304E7312087ED53006268B8 /* OpenSans-ExtraBoldItalic.ttf */,
+				F304E7322087ED53006268B8 /* OpenSans-Regular.ttf */,
+				F304E7332087ED53006268B8 /* OpenSans-BoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F304E7442088D1BF006268B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F304E7452088D205006268B8 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F379C7F62084F75D00FEC4B9 = {
 			isa = PBXGroup;
 			children = (
 				F379C8012084F75D00FEC4B9 /* Melo */,
 				F379C8192084F75E00FEC4B9 /* MeloTests */,
 				F379C8242084F75E00FEC4B9 /* MeloUITests */,
+				F304E7292087ED53006268B8 /* Fonts */,
 				F379C8002084F75D00FEC4B9 /* Products */,
 				01B014594412F7E4C81847BC /* Pods */,
 				206740B1D6327BAD7CBF30AA /* Frameworks */,
@@ -142,12 +194,15 @@
 			isa = PBXGroup;
 			children = (
 				F379C8022084F75D00FEC4B9 /* AppDelegate.swift */,
-				F379C8042084F75D00FEC4B9 /* ViewController.swift */,
 				F379C8062084F75D00FEC4B9 /* Main.storyboard */,
+				F304E7422088375E006268B8 /* HomeViewController.swift */,
+				F304E7252087DE40006268B8 /* PostTableViewCell.swift */,
+				F304E7262087DE40006268B8 /* PostTableViewCell.xib */,
 				F379C80C2084F75E00FEC4B9 /* Assets.xcassets */,
 				F379C80E2084F75E00FEC4B9 /* LaunchScreen.storyboard */,
-				F379C8112084F75E00FEC4B9 /* Info.plist */,
+				F304E7442088D1BF006268B8 /* Models */,
 				F379C8092084F75D00FEC4B9 /* Melo.xcdatamodeld */,
+				F379C8112084F75E00FEC4B9 /* Info.plist */,
 				F379C8332085109200FEC4B9 /* GoogleService-Info.plist */,
 			);
 			path = Melo;
@@ -279,7 +334,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F304E7392087ED53006268B8 /* OpenSans-Bold.ttf in Resources */,
+				F304E7342087ED53006268B8 /* OpenSans-Semibold.ttf in Resources */,
+				F304E7362087ED53006268B8 /* OpenSans-Italic.ttf in Resources */,
+				F304E7372087ED53006268B8 /* OpenSans-ExtraBold.ttf in Resources */,
+				F304E73A2087ED53006268B8 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				F379C8102084F75E00FEC4B9 /* LaunchScreen.storyboard in Resources */,
+				F304E7382087ED53006268B8 /* OpenSans-LightItalic.ttf in Resources */,
+				F304E7352087ED53006268B8 /* OpenSans-Light.ttf in Resources */,
+				F304E7282087DE40006268B8 /* PostTableViewCell.xib in Resources */,
+				F304E73D2087ED53006268B8 /* OpenSans-BoldItalic.ttf in Resources */,
+				F304E73B2087ED53006268B8 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				F304E73C2087ED53006268B8 /* OpenSans-Regular.ttf in Resources */,
 				F379C8342085109200FEC4B9 /* GoogleService-Info.plist in Resources */,
 				F379C80D2084F75E00FEC4B9 /* Assets.xcassets in Resources */,
 				F379C8082084F75D00FEC4B9 /* Main.storyboard in Resources */,
@@ -348,12 +414,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Melo/Pods-Melo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,9 +454,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F379C8052084F75D00FEC4B9 /* ViewController.swift in Sources */,
 				F379C8032084F75D00FEC4B9 /* AppDelegate.swift in Sources */,
+				F304E7272087DE40006268B8 /* PostTableViewCell.swift in Sources */,
 				F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */,
+				F304E7432088375E006268B8 /* HomeViewController.swift in Sources */,
+				F304E7462088D205006268B8 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +635,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8NNTRP25;
 				INFOPLIST_FILE = Melo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wearemelo.Melo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -581,7 +654,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8NNTRP25;
 				INFOPLIST_FILE = Melo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wearemelo.Melo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -598,7 +674,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8NNTRP25;
 				INFOPLIST_FILE = MeloTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wearemelo.MeloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -616,7 +696,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8NNTRP25;
 				INFOPLIST_FILE = MeloTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wearemelo.MeloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -633,7 +717,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8NNTRP25;
 				INFOPLIST_FILE = MeloUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wearemelo.MeloUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -650,7 +738,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8NNTRP25;
 				INFOPLIST_FILE = MeloUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wearemelo.MeloUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
