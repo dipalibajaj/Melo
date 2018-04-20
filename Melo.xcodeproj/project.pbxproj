@@ -32,6 +32,10 @@
 		F379C81B2084F75E00FEC4B9 /* MeloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379C81A2084F75E00FEC4B9 /* MeloTests.swift */; };
 		F379C8262084F75E00FEC4B9 /* MeloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379C8252084F75E00FEC4B9 /* MeloUITests.swift */; };
 		F379C8342085109200FEC4B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F379C8332085109200FEC4B9 /* GoogleService-Info.plist */; };
+		F3B6DE23208A340B00CBD719 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE22208A340B00CBD719 /* MenuViewController.swift */; };
+		F3B6DE29208A554C00CBD719 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */; };
+		F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */; };
+		F3B6DE2D208A580300CBD719 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE2C208A580300CBD719 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,10 @@
 		F379C8252084F75E00FEC4B9 /* MeloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloUITests.swift; sourceTree = "<group>"; };
 		F379C8272084F75E00FEC4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F379C8332085109200FEC4B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3B6DE22208A340B00CBD719 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3B6DE2C208A580300CBD719 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,8 +203,12 @@
 			children = (
 				F379C8022084F75D00FEC4B9 /* AppDelegate.swift */,
 				F379C8062084F75D00FEC4B9 /* Main.storyboard */,
+				F3B6DE22208A340B00CBD719 /* MenuViewController.swift */,
+				F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */,
+				F3B6DE2C208A580300CBD719 /* SignUpViewController.swift */,
 				F304E7422088375E006268B8 /* HomeViewController.swift */,
 				F304E7252087DE40006268B8 /* PostTableViewCell.swift */,
+				F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */,
 				F304E7262087DE40006268B8 /* PostTableViewCell.xib */,
 				F379C80C2084F75E00FEC4B9 /* Assets.xcassets */,
 				F379C80E2084F75E00FEC4B9 /* LaunchScreen.storyboard */,
@@ -454,9 +466,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B6DE29208A554C00CBD719 /* HelperExtensions.swift in Sources */,
 				F379C8032084F75D00FEC4B9 /* AppDelegate.swift in Sources */,
+				F3B6DE23208A340B00CBD719 /* MenuViewController.swift in Sources */,
 				F304E7272087DE40006268B8 /* PostTableViewCell.swift in Sources */,
+				F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */,
 				F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */,
+				F3B6DE2D208A580300CBD719 /* SignUpViewController.swift in Sources */,
 				F304E7432088375E006268B8 /* HomeViewController.swift in Sources */,
 				F304E7462088D205006268B8 /* Post.swift in Sources */,
 			);

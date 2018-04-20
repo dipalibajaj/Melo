@@ -18,7 +18,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         Post(id: "2", author: "Alex", emoji: "🌸", header: "We're going to New York", body: "Feeling happy to explore, meet people, try new things."),
         Post(id: "3", author: "Tansh", emoji: "🙄", header: "I have so much work to do.", body: "Nobody really understands me, or am I not saying it properly?"),
         Post(id: "4", author: "Jimmy", emoji: "🤬", header: "It's been four days and I", body: "Still can't seem to figure out any of this code. Bloody JS"),
-        Post(id: "5", author: "Drew", emoji: "🤪", header: "Can't believe it.", body: "This code is working out. So glad we switched to Swift")
+        Post(id: "5", author: "Drew", emoji: "🤪", header: "Can't believe it.", body: "This code is working out. So glad we switched to Swift"),
+        Post(id: "6", author: "Joe", emoji: "😎", header: "Been rolling out the new designs smooth.", body: "We're actually going to make Hang happen. Coming in Fall 2018.")
     ]
     
     override func viewDidLoad() {
