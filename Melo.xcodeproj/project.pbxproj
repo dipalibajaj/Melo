@@ -36,6 +36,8 @@
 		F3B6DE29208A554C00CBD719 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */; };
 		F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */; };
 		F3B6DE2D208A580300CBD719 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE2C208A580300CBD719 /* SignUpViewController.swift */; };
+		F3B6DE2F208A908500CBD719 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE2E208A908500CBD719 /* RoundedWhiteButton.swift */; };
+		F3B6DE31208A99D400CBD719 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE30208A99D400CBD719 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3B6DE2C208A580300CBD719 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F3B6DE2E208A908500CBD719 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		F3B6DE30208A99D400CBD719 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,8 +211,10 @@
 				F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */,
 				F3B6DE2C208A580300CBD719 /* SignUpViewController.swift */,
 				F304E7422088375E006268B8 /* HomeViewController.swift */,
+				F3B6DE30208A99D400CBD719 /* ProfileViewController.swift */,
 				F304E7252087DE40006268B8 /* PostTableViewCell.swift */,
 				F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */,
+				F3B6DE2E208A908500CBD719 /* RoundedWhiteButton.swift */,
 				F304E7262087DE40006268B8 /* PostTableViewCell.xib */,
 				F379C80C2084F75E00FEC4B9 /* Assets.xcassets */,
 				F379C80E2084F75E00FEC4B9 /* LaunchScreen.storyboard */,
@@ -467,10 +473,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3B6DE29208A554C00CBD719 /* HelperExtensions.swift in Sources */,
+				F3B6DE2F208A908500CBD719 /* RoundedWhiteButton.swift in Sources */,
 				F379C8032084F75D00FEC4B9 /* AppDelegate.swift in Sources */,
 				F3B6DE23208A340B00CBD719 /* MenuViewController.swift in Sources */,
 				F304E7272087DE40006268B8 /* PostTableViewCell.swift in Sources */,
 				F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */,
+				F3B6DE31208A99D400CBD719 /* ProfileViewController.swift in Sources */,
 				F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */,
 				F3B6DE2D208A580300CBD719 /* SignUpViewController.swift in Sources */,
 				F304E7432088375E006268B8 /* HomeViewController.swift in Sources */,
