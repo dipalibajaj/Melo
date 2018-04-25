@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
@@ -159,6 +160,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         Auth.auth().createUser(withEmail: email, password: pass) { user, error in
             if error == nil && user != nil {
+                
+                //Using the user class, saving user data to firebase.
+                let newUser = User(uid: (user?.uid)!, username: username, email: email)
+                newUser.saveUser()
+                
                 print ("User created!")
                 
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()

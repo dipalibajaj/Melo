@@ -79,7 +79,7 @@
         <!--Menu View Controller-->
         <scene sceneID="M4p-HW-S6l">
             <objects>
-                <viewController id="hAu-cl-XXe" customClass="MenuViewController" customModule="Melo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hAu-cl-XXe" customClass="MenuViewController" customModule="Melo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hLd-0U-mbZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,9 +133,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IKL-cH-IkA"/>
                     </view>
-                    <connections>
-                        <segue destination="SCY-Nb-nxZ" kind="presentation" identifier="toHomeScreen" id="Q79-BB-CDh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELL-lc-pqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,10 +346,10 @@
             </objects>
             <point key="canvasLocation" x="4042" y="928"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="l6B-5H-CB6">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SCY-Nb-nxZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SCY-Nb-nxZ" customClass="MainTabBarController" customModule="Melo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="f1y-u8-d7w">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

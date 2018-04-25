@@ -32,10 +32,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        if let user = Auth.auth().currentUser {
-            self.performSegue(withIdentifier: "toHomeScreen", sender: self)
-        }
+
     }
     
     //Changing the status bar color to white.

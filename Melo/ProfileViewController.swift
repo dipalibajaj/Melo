@@ -20,8 +20,8 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func handleLogout(_ target: UIBarButtonItem) {
+        //Log out user.
         try! Auth.auth().signOut()
-        self.dismiss(animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
