@@ -33,4 +33,44 @@ let emojiSections = [
         "emojiIcon":"😎",
         "emojiTitle": "Confident"
     ],
+    [
+        "emojiIcon":"🌸",
+        "emojiTitle": "Hopeful"
+    ],
+    [
+        "emojiIcon":"😶",
+        "emojiTitle": "Empty"
+    ],
+    [
+        "emojiIcon":"😡",
+        "emojiTitle": "Angry"
+    ],
+    [
+        "emojiIcon":"😳",
+        "emojiTitle": "Nervous"
+    ],
+    [
+        "emojiIcon":"😎",
+        "emojiTitle": "Confident"
+    ],
+    [
+        "emojiIcon":"🌸",
+        "emojiTitle": "Hopeful"
+    ],
+    [
+        "emojiIcon":"😶",
+        "emojiTitle": "Empty"
+    ],
+    [
+        "emojiIcon":"😡",
+        "emojiTitle": "Angry"
+    ],
+    [
+        "emojiIcon":"😳",
+        "emojiTitle": "Nervous"
+    ],
+    [
+        "emojiIcon":"😎",
+        "emojiTitle": "Confident"
+    ],
 ]

@@ -23,9 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
-        //let user = User(uid: "random123", username: "dips", birthday: "June 9 1996", email: "dips@gmail.com")
-        //user.saveUser()
-        
         let authListener = Auth.auth().addStateDidChangeListener { auth, user in
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
