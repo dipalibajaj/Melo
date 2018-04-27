@@ -25,13 +25,13 @@ class User {
     }
     
     func saveUser() {
-        let userRef = Database.database().reference()
-        userRef.child("users").child(uid).setValue(toUserDictionary())
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let userRef = Database.database().reference().child("users/\(uid)/profile")
+        userRef.setValue(toUserDictionary())
     }
     
     func toUserDictionary() -> [String : Any] {
         return [
-            "uid" : uid,
             "username" : username,
             //"birthday" : birthday,
             "email" : email

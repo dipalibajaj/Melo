@@ -14,16 +14,16 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var feelingLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
-    @IBOutlet weak var postTimeLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var postCardView: UIView!
+    @IBOutlet weak var reframeCount: UILabel!
+    @IBOutlet weak var hugCount: UILabel!
+    @IBOutlet weak var reframeLabel: UILabel!
+    @IBOutlet weak var hugLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        postCardView.layer.cornerRadius = 3
-        postCardView.clipsToBounds = true
-        postCardView.layer.shadowOpacity = 5
-        postCardView.layer.shadowRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,6 +37,12 @@ class PostTableViewCell: UITableViewCell {
         feelingLabel.text = post.emoji
         headerLabel.text = post.header
         bodyLabel.text = post.body
+        
+        hugLabel.text = "HUGS"
+        hugLabel.addCharacterSpacing()
+        
+        reframeLabel.text = "REFRAMES"
+        reframeLabel.addCharacterSpacing()
     }
     
 }
