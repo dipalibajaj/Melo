@@ -14,63 +14,132 @@ class EmojiData: NSObject {
 
 let emojiSections = [
     [
-        "emojiIcon":"🌸",
-        "emojiTitle": "Hopeful"
+        "emojiIcon":"😊",
+        "emojiTitle": "Cheerful"
     ],
     [
-        "emojiIcon":"😶",
-        "emojiTitle": "Empty"
-    ],
-    [
-        "emojiIcon":"😡",
-        "emojiTitle": "Angry"
-    ],
-    [
-        "emojiIcon":"😳",
-        "emojiTitle": "Nervous"
+        "emojiIcon":"🙂",
+        "emojiTitle": "Calm"
     ],
     [
         "emojiIcon":"😎",
         "emojiTitle": "Confident"
     ],
     [
-        "emojiIcon":"🌸",
-        "emojiTitle": "Hopeful"
+        "emojiIcon":"🤩",
+        "emojiTitle": "Ecstatic"
     ],
     [
-        "emojiIcon":"😶",
-        "emojiTitle": "Empty"
+        "emojiIcon":"🙏",
+        "emojiTitle": "Grateful"
+    ],
+    [
+        "emojiIcon":"🔥",
+        "emojiTitle": "Fire"
+    ],
+    [
+        "emojiIcon":"😄",
+        "emojiTitle": "Happy"
+    ],
+    [
+        "emojiIcon":"🌻",
+        "emojiTitle": "Inspired"
+    ],
+    [
+        "emojiIcon":"💪",
+        "emojiTitle": "Motivated"
+    ],
+    [
+        "emojiIcon":"💕",
+        "emojiTitle": "Loving"
+    ],
+    [
+        "emojiIcon":"🌈",
+        "emojiTitle": "Wonderful"
+    ],
+    [
+        "emojiIcon":"😌",
+        "emojiTitle": "Chill"
+    ],
+    [
+        "emojiIcon":"😁",
+        "emojiTitle": "Proud"
+    ],
+    [
+        "emojiIcon":"😲",
+        "emojiTitle": "Surprised"
+    ],
+    [
+        "emojiIcon":"🌸",
+        "emojiTitle": "Hopeful"
     ],
     [
         "emojiIcon":"😡",
         "emojiTitle": "Angry"
     ],
     [
-        "emojiIcon":"😳",
-        "emojiTitle": "Nervous"
+        "emojiIcon":"😰",
+        "emojiTitle": "Afraid"
     ],
     [
-        "emojiIcon":"😎",
-        "emojiTitle": "Confident"
+        "emojiIcon":"🙄",
+        "emojiTitle": "Annoyed"
     ],
     [
-        "emojiIcon":"🌸",
-        "emojiTitle": "Hopeful"
+        "emojiIcon":"😨",
+        "emojiTitle": "Anxious"
+    ],
+    [
+        "emojiIcon":"😔",
+        "emojiTitle": "Disappointed"
+    ],
+    [
+        "emojiIcon":"🤢",
+        "emojiTitle": "Disgusted"
+    ],
+    [
+        "emojiIcon":"🙈",
+        "emojiTitle": "Embarrassed"
     ],
     [
         "emojiIcon":"😶",
         "emojiTitle": "Empty"
     ],
     [
-        "emojiIcon":"😡",
-        "emojiTitle": "Angry"
+        "emojiIcon":"😴",
+        "emojiTitle": "Exhausted"
     ],
     [
-        "emojiIcon":"😳",
+        "emojiIcon":"😕",
+        "emojiTitle": "Insecure"
+    ],
+    [
+        "emojiIcon":"😒",
+        "emojiTitle": "Irritated"
+    ],
+    [
+        "emojiIcon":"🤯",
+        "emojiTitle": "Stressed"
+    ],
+    [
+        "emojiIcon":"😞",
+        "emojiTitle": "Lonely"
+    ],
+    [
+        "emojiIcon":"😈",
+        "emojiTitle": "Jealous"
+    ],
+    [
+        "emojiIcon":"😪",
+        "emojiTitle": "Tired"
+    ],
+    [
+        "emojiIcon":"😥",
+        "emojiTitle": "Sad"
+    ],
+    [
+        "emojiIcon":"😬",
         "emojiTitle": "Nervous"
     ],
-    [
-        "emojiIcon":"😎",
-        "emojiTitle": "Confident"
-    ],
+
 ]

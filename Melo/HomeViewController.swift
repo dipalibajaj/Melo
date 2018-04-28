@@ -13,14 +13,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var tableView: UITableView!
     
-    var posts = [
-        Post(id: "1", author: "dipsster is feeling anxious.", emoji: "😢", header: "Note Title.", body: "Such as personal hygiene, brushing, eating, putting on clothing. I'm just going to keep writing to see what happens."),
-        Post(id: "2", author: "sander_castle is feeling hopeful.", emoji: "🌸", header: "Note Title", body: "Feeling happy to explore, meet people, try new things."),
-        Post(id: "3", author: "tansh is feeling sick.", emoji: "🤢", header: "Note Title.", body: "Nobody really understands me, or am I not saying it properly?"),
-        Post(id: "4", author: "jimmy420 is feeling angry.", emoji: "🤬", header: "Note Title", body: "Still can't seem to figure out any of this code. Bloody JS"),
-        Post(id: "5", author: "drewbert is feeling crazy.", emoji: "🤪", header: "Note Title", body: "This code is working out. So glad we switched to Swift"),
-        Post(id: "6", author: "jkndy is feeling cool.", emoji: "😎", header: "Note Title", body: "We're actually going to make Hang happen. Coming in Fall 2018.")
-    ]
+    var posts = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +51,36 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.reloadData()
+        
+        observePosts()
+    }
+    
+    func observePosts() {
+        let postRef = Database.database().reference().child("posts")
+        postRef.observe(.value, with: { snapshot in
+            
+            var tempPosts = [Post]()
+            
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let author = dict["author"] as? [String:Any],
+                    let uid = author["uid"] as? String,
+                    let email = author["email"] as? String,
+                    let username = author["username"] as? String,
+                    let header = dict["header"] as? String,
+                    let body = dict["body"] as? String,
+                    let emoji = dict["emoji"] as? String,
+                    let timestamp = dict["timestamp"] as? Double
+                    {
+                    let userProfile = User(uid: uid, username: username, email: email)
+                    let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, header: header, body: body, timestamp: timestamp)
+                    tempPosts.append(post)
+                    }
+                }
+            self.posts = tempPosts
+            self.tableView.reloadData()
+            })
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,16 +101,5 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

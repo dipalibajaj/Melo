@@ -33,10 +33,11 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func set(post:Post) {
-        usernameLabel.text = post.author
+        usernameLabel.text = post.author.username
         feelingLabel.text = post.emoji
         headerLabel.text = post.header
         bodyLabel.text = post.body
+        //Need to add in the timelabel
         
         hugLabel.text = "HUGS"
         hugLabel.addCharacterSpacing()
@@ -44,5 +45,5 @@ class PostTableViewCell: UITableViewCell {
         reframeLabel.text = "REFRAMES"
         reframeLabel.addCharacterSpacing()
     }
-    
+ 
 }

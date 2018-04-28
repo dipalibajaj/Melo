@@ -20,6 +20,15 @@ class NewNoteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NewNoteToEntry" {
+            let destViewController = segue.destination as! UINavigationController
+            let toViewController = destViewController.topViewController as! NewNoteEntryViewController
+            let indexPath = sender as! IndexPath
+            let emojiSection = emojiSections[indexPath.row]
+            toViewController.emojiSection = emojiSection
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,5 +47,9 @@ extension NewNoteViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.emojiIconLabel.text = emojiSection["emojiIcon"]
         cell.emojiTitleLabel.text = emojiSection["emojiTitle"]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "NewNoteToEntry", sender: indexPath)
     }
 }

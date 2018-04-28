@@ -10,16 +10,18 @@ import Foundation
 
 class Post {
     var id:String
-    var author:String
+    var author:User
     var emoji: String
     var header:String
     var body:String
+    var timestamp: Double
     
-    init(id:String, author:String, emoji:String, header:String, body:String) {
+    init(id:String, author:User, emoji:String, header:String, body:String, timestamp:Double) {
         self.id = id
         self.author = author
         self.emoji = emoji
         self.header = header
         self.body = body
+        self.timestamp = timestamp
     }
 }

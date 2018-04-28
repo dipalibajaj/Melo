@@ -17,11 +17,11 @@ class User {
     
     var ref: DatabaseReference!
     
-    init(uid: String, username: String, email: String) { //Need to add (birthday: String) to init when added to UI
+    init(uid: String, username: String, email: String){ //Need to add (birthday: String) and email to init when added to UI
         self.uid = uid
         self.username = username
         //self.birthday = birthday
-        self.email = email
+       self.email = email
     }
     
     func saveUser() {
