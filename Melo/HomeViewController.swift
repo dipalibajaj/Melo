@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var tableView: UITableView!
     
     var posts = [Post]()
+    var selectedIndexPath: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +43,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
         
-        //Making sure the last post cell is visible.
-        let adjustForTabbarInsets: UIEdgeInsets = UIEdgeInsetsMake(0, 0, self.tabBarController!.tabBar.frame.height, 0)
-        self.tableView.contentInset = adjustForTabbarInsets
-        self.tableView.scrollIndicatorInsets = adjustForTabbarInsets
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
@@ -71,16 +67,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let header = dict["header"] as? String,
                     let body = dict["body"] as? String,
                     let emoji = dict["emoji"] as? String,
+                    let emojiTitle = dict["emojiTitle"] as? String,
                     let timestamp = dict["timestamp"] as? Double
                     {
                     let userProfile = User(uid: uid, username: username, email: email)
-                    let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, header: header, body: body, timestamp: timestamp)
+                        let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, emojiTitle: emojiTitle, header: header, body: body, timestamp: timestamp)
                     tempPosts.append(post)
                     }
                 }
-            self.posts = tempPosts
+            //Reverse post order!
+            self.posts = tempPosts.reversed()
             self.tableView.reloadData()
             })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToPost" {
+            let viewController = segue.destination as! ViewPostViewController
+            let post = posts[selectedIndexPath]
+            viewController.post = post
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,13 +99,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+        cell.selectionStyle = .none
         cell.set(post: posts[indexPath.row])
         return cell
     }
+ 
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectedIndexPath = indexPath.row
+        performSegue(withIdentifier: "HomeToPost", sender: selectedIndexPath)
     }
 
 }
+

@@ -18,7 +18,7 @@ class NewNoteEntryViewController: UIViewController {
     @IBOutlet weak var bodyTextView: UITextView!
     @IBOutlet weak var postTimeLabel: UILabel!
     
-
+    var emojiTitleLabel = String()
     var emojiSection: [String: String]!
     
     override func viewDidLoad() {
@@ -27,14 +27,28 @@ class NewNoteEntryViewController: UIViewController {
         //Remove divider for navigation controller.
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         
+        //Setting username to current user.
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let userRef = Database.database().reference().child("users/\(uid)/profile")
+        userRef.observe(.value, with: { snapshot in
+        
+            if let dict = snapshot.value as? [String: Any] {
+                self.navigationItem.title = dict["username"] as? String
+            }
+        })
+        
         emojiIconLabel.text = emojiSection["emojiIcon"]
+        emojiTitleLabel = emojiSection["emojiTitle"]!
         
         self.hideKeyboardWhenTappedAround()
 
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+            //Show Home
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let toHome = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+            self.present(toHome, animated: true, completion: nil)
     }
     
 
@@ -51,6 +65,7 @@ class NewNoteEntryViewController: UIViewController {
                 "email": userProfile.email
             ],
             "emoji": emojiIconLabel.text!,
+            "emojiTitle": emojiTitleLabel,
             "header": headerTextField.text!,
             "body": bodyTextView.text,
             "timestamp": [".sv":"timestamp"]
@@ -58,7 +73,10 @@ class NewNoteEntryViewController: UIViewController {
         
         postRef.setValue(postObject, withCompletionBlock: { error, ref in
             if error == nil {
-                self.dismiss(animated: true, completion: nil)
+                //self.dismiss(animated: true, completion: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let toHome = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+                self.present(toHome, animated: true, completion: nil)
             } else {
                 //Handle the error
             }

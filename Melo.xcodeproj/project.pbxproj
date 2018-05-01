@@ -26,6 +26,7 @@
 		F304E7462088D205006268B8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304E7452088D205006268B8 /* Post.swift */; };
 		F30A3B3F2091257700577633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A3B3E2091257700577633 /* User.swift */; };
 		F30A3B4220915E8F00577633 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A3B4120915E8F00577633 /* LearnViewController.swift */; };
+		F353ABEC2097E1BE00DA96F3 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353ABEB2097E1BE00DA96F3 /* ViewPostViewController.swift */; };
 		F379C8032084F75D00FEC4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379C8022084F75D00FEC4B9 /* AppDelegate.swift */; };
 		F379C8082084F75D00FEC4B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F379C8062084F75D00FEC4B9 /* Main.storyboard */; };
 		F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F379C8092084F75D00FEC4B9 /* Melo.xcdatamodeld */; };
@@ -90,6 +91,7 @@
 		F304E7452088D205006268B8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F30A3B3E2091257700577633 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F30A3B4120915E8F00577633 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		F353ABEB2097E1BE00DA96F3 /* ViewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostViewController.swift; sourceTree = "<group>"; };
 		F379C7FF2084F75D00FEC4B9 /* Melo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F379C8022084F75D00FEC4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F379C8072084F75D00FEC4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				F379C8062084F75D00FEC4B9 /* Main.storyboard */,
 				F30A3B402091425300577633 /* Login */,
 				F304E7422088375E006268B8 /* HomeViewController.swift */,
+				F353ABEB2097E1BE00DA96F3 /* ViewPostViewController.swift */,
 				F30A3B4120915E8F00577633 /* LearnViewController.swift */,
 				F39018FB2093DDA70012BB33 /* New Note */,
 				F3B6DE30208A99D400CBD719 /* ProfileViewController.swift */,
@@ -520,6 +523,7 @@
 				F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */,
 				F39018F22093C7D90012BB33 /* EmojiData.swift in Sources */,
 				F3B6DE31208A99D400CBD719 /* ProfileViewController.swift in Sources */,
+				F353ABEC2097E1BE00DA96F3 /* ViewPostViewController.swift in Sources */,
 				F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */,
 				F39018F02093C4010012BB33 /* NewNoteViewController.swift in Sources */,
 				F30A3B3F2091257700577633 /* User.swift in Sources */,

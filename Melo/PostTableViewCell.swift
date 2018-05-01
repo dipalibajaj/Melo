@@ -33,7 +33,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func set(post:Post) {
-        usernameLabel.text = post.author.username
+        usernameLabel.text = (post.author.username) + " is feeling " + (post.emojiTitle.lowercased()) + "."
         feelingLabel.text = post.emoji
         headerLabel.text = post.header
         bodyLabel.text = post.body
