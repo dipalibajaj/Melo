@@ -73,7 +73,6 @@ class NewNoteEntryViewController: UIViewController {
         
         postRef.setValue(postObject, withCompletionBlock: { error, ref in
             if error == nil {
-                //self.dismiss(animated: true, completion: nil)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let toHome = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
                 self.present(toHome, animated: true, completion: nil)

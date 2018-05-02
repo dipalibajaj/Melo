@@ -108,7 +108,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedIndexPath = indexPath.row
-        performSegue(withIdentifier: "HomeToPost", sender: selectedIndexPath)
+        performSegue(withIdentifier: "HomeToPost", sender: self)
     }
 
 }

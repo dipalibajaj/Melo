@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputAccessoryView" customModule="Melo" customModuleProvider="target">
+            <connections>
+                <outlet property="accessoryContentView" destination="iN0-l3-epB" id="WqZ-Cq-a7P"/>
+                <outlet property="hugContainerView" destination="Jav-OO-Vm6" id="F9U-j4-Ezz"/>
+                <outlet property="hugEmojiButton" destination="dxN-Sh-i5j" id="AA0-NU-XYB"/>
+                <outlet property="textContainerView" destination="jho-Km-hPU" id="50e-Ux-fUG"/>
+                <outlet property="textField" destination="Ldi-Ot-3RB" id="Um0-EL-9OG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InputAccessoryView" customModule="Melo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jav-OO-Vm6">
+                    <rect key="frame" x="325" y="12" width="40" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxN-Sh-i5j">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="FR0-UK-R59"/>
+                                <constraint firstAttribute="height" constant="40" id="tIS-OC-uNU"/>
+                            </constraints>
+                            <state key="normal" title="Hug"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.95686274510000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="dxN-Sh-i5j" firstAttribute="top" secondItem="Jav-OO-Vm6" secondAttribute="top" id="7Ih-iZ-YZL"/>
+                        <constraint firstAttribute="trailing" secondItem="dxN-Sh-i5j" secondAttribute="trailing" id="HZk-VK-cMn"/>
+                        <constraint firstItem="dxN-Sh-i5j" firstAttribute="top" secondItem="Jav-OO-Vm6" secondAttribute="top" id="M2D-ez-saj"/>
+                        <constraint firstItem="dxN-Sh-i5j" firstAttribute="leading" secondItem="Jav-OO-Vm6" secondAttribute="leading" id="XsJ-IP-a4q"/>
+                        <constraint firstAttribute="bottom" secondItem="dxN-Sh-i5j" secondAttribute="bottom" id="cBU-rx-WBl"/>
+                        <constraint firstAttribute="bottom" secondItem="dxN-Sh-i5j" secondAttribute="bottom" id="cTI-H3-RCR"/>
+                        <constraint firstItem="dxN-Sh-i5j" firstAttribute="leading" secondItem="Jav-OO-Vm6" secondAttribute="leading" id="sDb-Ml-RhN"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jho-Km-hPU">
+                    <rect key="frame" x="10" y="12" width="305" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a reframe..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldi-Ot-3RB">
+                            <rect key="frame" x="5" y="5" width="295" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.95686274510000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ldi-Ot-3RB" secondAttribute="bottom" constant="5" id="2RA-aC-0W5"/>
+                        <constraint firstItem="Ldi-Ot-3RB" firstAttribute="top" secondItem="jho-Km-hPU" secondAttribute="top" constant="5" id="Dnz-6R-sGP"/>
+                        <constraint firstItem="Ldi-Ot-3RB" firstAttribute="leading" secondItem="jho-Km-hPU" secondAttribute="leading" constant="5" id="WM8-hm-CfR"/>
+                        <constraint firstAttribute="trailing" secondItem="Ldi-Ot-3RB" secondAttribute="trailing" constant="5" id="qUW-By-kBO"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Jav-OO-Vm6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="24s-wO-2NY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jho-Km-hPU" secondAttribute="bottom" constant="12" id="B6j-bf-xTZ"/>
+                <constraint firstItem="jho-Km-hPU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="IRW-5S-NaK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Jav-OO-Vm6" secondAttribute="bottom" constant="12" id="TRk-QS-0VM"/>
+                <constraint firstItem="Jav-OO-Vm6" firstAttribute="leading" secondItem="jho-Km-hPU" secondAttribute="trailing" constant="10" id="hhL-OI-PRz"/>
+                <constraint firstItem="jho-Km-hPU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="ryN-SB-85Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jav-OO-Vm6" secondAttribute="trailing" constant="10" id="vKu-Rx-fQf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="21.5" y="-53"/>
+        </view>
+    </objects>
+</document>
