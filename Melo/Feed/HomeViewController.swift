@@ -71,7 +71,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let timestamp = dict["timestamp"] as? Double
                     {
                     let userProfile = User(uid: uid, username: username, email: email)
-                        let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, emojiTitle: emojiTitle, header: header, body: body, timestamp: timestamp)
+                    let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, emojiTitle: emojiTitle, header: header, body: body, timestamp: timestamp)
                     tempPosts.append(post)
                     }
                 }
@@ -110,6 +110,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         selectedIndexPath = indexPath.row
         performSegue(withIdentifier: "HomeToPost", sender: self)
     }
-
+    
 }
 
