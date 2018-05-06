@@ -9,7 +9,8 @@
 import UIKit
 
 class LearnViewController: UIViewController {
-
+    @IBOutlet weak var introCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

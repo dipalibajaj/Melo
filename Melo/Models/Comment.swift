@@ -8,16 +8,15 @@
 
 import Foundation
 
-struct Comment {
+class Comment {
     
-    var user: User?
+    var user: User
+    var comment: String
+    var uid: String
     
-    let comment: String
-    
-    let uid: String
-    
-    init(dictionary: [String: Any]) {
-        self.comment = dictionary["comment"] as? String ?? ""
-        self.uid = dictionary["uid"] as? String ?? ""
+    init(uid:String, user:User, comment:String) {
+        self.uid = uid
+        self.user = user
+        self.comment = comment
     }
 }

@@ -17,6 +17,7 @@ class Post {
     var header:String
     var body:String
     var timestamp: Double
+    //var reframes: Int
     
     init(id:String, author:User, emoji:String, emojiTitle: String, header:String, body:String, timestamp:Double) {
         self.id = id
@@ -26,6 +27,7 @@ class Post {
         self.header = header
         self.body = body
         self.timestamp = timestamp
+        //self.reframes = reframes
     }
  
 }

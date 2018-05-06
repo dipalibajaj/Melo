@@ -27,10 +27,12 @@
 		F30A3B3F2091257700577633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A3B3E2091257700577633 /* User.swift */; };
 		F30A3B4220915E8F00577633 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A3B4120915E8F00577633 /* LearnViewController.swift */; };
 		F353ABEE2098EC3800DA96F3 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353ABED2098EC3800DA96F3 /* ViewPostViewController.swift */; };
-		F353ABF2209962FE00DA96F3 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353ABF1209962FE00DA96F3 /* InputAccessoryView.swift */; };
-		F353ABF42099631000DA96F3 /* InputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F353ABF32099631000DA96F3 /* InputAccessoryView.xib */; };
-		F353ABF6209AB11900DA96F3 /* CommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353ABF5209AB11900DA96F3 /* CommentCollectionViewCell.swift */; };
 		F353ABF8209AB7ED00DA96F3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353ABF7209AB7ED00DA96F3 /* Comment.swift */; };
+		F376440C209BC56A0074EFD3 /* CommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376440A209BC56A0074EFD3 /* CommentCollectionViewCell.swift */; };
+		F376440D209BC56A0074EFD3 /* CommentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F376440B209BC56A0074EFD3 /* CommentCollectionViewCell.xib */; };
+		F376440F209CAE3A0074EFD3 /* CommentInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376440E209CAE3A0074EFD3 /* CommentInputAccessoryView.swift */; };
+		F376441A209EB6A20074EFD3 /* ViewPostCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3764418209EB6A20074EFD3 /* ViewPostCollectionReusableView.swift */; };
+		F376441B209EB6A20074EFD3 /* ViewPostCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3764419209EB6A20074EFD3 /* ViewPostCollectionReusableView.xib */; };
 		F379C8032084F75D00FEC4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379C8022084F75D00FEC4B9 /* AppDelegate.swift */; };
 		F379C8082084F75D00FEC4B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F379C8062084F75D00FEC4B9 /* Main.storyboard */; };
 		F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F379C8092084F75D00FEC4B9 /* Melo.xcdatamodeld */; };
@@ -96,10 +98,12 @@
 		F30A3B3E2091257700577633 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F30A3B4120915E8F00577633 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		F353ABED2098EC3800DA96F3 /* ViewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostViewController.swift; sourceTree = "<group>"; };
-		F353ABF1209962FE00DA96F3 /* InputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
-		F353ABF32099631000DA96F3 /* InputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputAccessoryView.xib; sourceTree = "<group>"; };
-		F353ABF5209AB11900DA96F3 /* CommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCollectionViewCell.swift; sourceTree = "<group>"; };
 		F353ABF7209AB7ED00DA96F3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		F376440A209BC56A0074EFD3 /* CommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCollectionViewCell.swift; sourceTree = "<group>"; };
+		F376440B209BC56A0074EFD3 /* CommentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCollectionViewCell.xib; sourceTree = "<group>"; };
+		F376440E209CAE3A0074EFD3 /* CommentInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccessoryView.swift; sourceTree = "<group>"; };
+		F3764418209EB6A20074EFD3 /* ViewPostCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostCollectionReusableView.swift; sourceTree = "<group>"; };
+		F3764419209EB6A20074EFD3 /* ViewPostCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewPostCollectionReusableView.xib; sourceTree = "<group>"; };
 		F379C7FF2084F75D00FEC4B9 /* Melo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F379C8022084F75D00FEC4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F379C8072084F75D00FEC4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -247,8 +251,6 @@
 				F379C8062084F75D00FEC4B9 /* Main.storyboard */,
 				F30A3B402091425300577633 /* Login */,
 				F3C5FDF4209B8EDC00DDF415 /* Feed */,
-				F353ABF1209962FE00DA96F3 /* InputAccessoryView.swift */,
-				F353ABF32099631000DA96F3 /* InputAccessoryView.xib */,
 				F30A3B4120915E8F00577633 /* LearnViewController.swift */,
 				F39018FB2093DDA70012BB33 /* New Note */,
 				F3B6DE30208A99D400CBD719 /* ProfileViewController.swift */,
@@ -299,7 +301,11 @@
 				F304E7252087DE40006268B8 /* PostTableViewCell.swift */,
 				F304E7262087DE40006268B8 /* PostTableViewCell.xib */,
 				F353ABED2098EC3800DA96F3 /* ViewPostViewController.swift */,
-				F353ABF5209AB11900DA96F3 /* CommentCollectionViewCell.swift */,
+				F3764418209EB6A20074EFD3 /* ViewPostCollectionReusableView.swift */,
+				F3764419209EB6A20074EFD3 /* ViewPostCollectionReusableView.xib */,
+				F376440A209BC56A0074EFD3 /* CommentCollectionViewCell.swift */,
+				F376440B209BC56A0074EFD3 /* CommentCollectionViewCell.xib */,
+				F376440E209CAE3A0074EFD3 /* CommentInputAccessoryView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -418,6 +424,8 @@
 				F304E7372087ED53006268B8 /* OpenSans-ExtraBold.ttf in Resources */,
 				F304E73A2087ED53006268B8 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				F379C8102084F75E00FEC4B9 /* LaunchScreen.storyboard in Resources */,
+				F376440D209BC56A0074EFD3 /* CommentCollectionViewCell.xib in Resources */,
+				F376441B209EB6A20074EFD3 /* ViewPostCollectionReusableView.xib in Resources */,
 				F304E7382087ED53006268B8 /* OpenSans-LightItalic.ttf in Resources */,
 				F304E7352087ED53006268B8 /* OpenSans-Light.ttf in Resources */,
 				F304E7282087DE40006268B8 /* PostTableViewCell.xib in Resources */,
@@ -426,7 +434,6 @@
 				F304E73C2087ED53006268B8 /* OpenSans-Regular.ttf in Resources */,
 				F379C8342085109200FEC4B9 /* GoogleService-Info.plist in Resources */,
 				F379C80D2084F75E00FEC4B9 /* Assets.xcassets in Resources */,
-				F353ABF42099631000DA96F3 /* InputAccessoryView.xib in Resources */,
 				F379C8082084F75D00FEC4B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,14 +549,15 @@
 				F304E7272087DE40006268B8 /* PostTableViewCell.swift in Sources */,
 				F30A3B4220915E8F00577633 /* LearnViewController.swift in Sources */,
 				F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */,
+				F376441A209EB6A20074EFD3 /* ViewPostCollectionReusableView.swift in Sources */,
 				F353ABF8209AB7ED00DA96F3 /* Comment.swift in Sources */,
 				F39018F22093C7D90012BB33 /* EmojiData.swift in Sources */,
 				F3B6DE31208A99D400CBD719 /* ProfileViewController.swift in Sources */,
 				F353ABEE2098EC3800DA96F3 /* ViewPostViewController.swift in Sources */,
+				F376440C209BC56A0074EFD3 /* CommentCollectionViewCell.swift in Sources */,
 				F379C80B2084F75D00FEC4B9 /* Melo.xcdatamodeld in Sources */,
-				F353ABF6209AB11900DA96F3 /* CommentCollectionViewCell.swift in Sources */,
 				F39018F02093C4010012BB33 /* NewNoteViewController.swift in Sources */,
-				F353ABF2209962FE00DA96F3 /* InputAccessoryView.swift in Sources */,
+				F376440F209CAE3A0074EFD3 /* CommentInputAccessoryView.swift in Sources */,
 				F30A3B3F2091257700577633 /* User.swift in Sources */,
 				F3B6DE2D208A580300CBD719 /* SignUpViewController.swift in Sources */,
 				F304E7432088375E006268B8 /* HomeViewController.swift in Sources */,

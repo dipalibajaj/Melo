@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         
         tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.9647058824, blue: 0.9450980392, alpha: 1)
+        tableView.backgroundColor = #colorLiteral(red: 1, green: 0.9490196078, blue: 0.8980392157, alpha: 1)
         tableView.separatorStyle = .none
         
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
@@ -109,6 +109,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.deselectRow(at: indexPath, animated: true)
         selectedIndexPath = indexPath.row
         performSegue(withIdentifier: "HomeToPost", sender: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        inputAccessoryView?.resignFirstResponder()
     }
     
 }
