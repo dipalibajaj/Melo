@@ -16,10 +16,10 @@ class Post {
     var emojiTitle: String
     var header:String
     var body:String
-    var timestamp: Double
+    var timestamp: String
     //var reframes: Int
     
-    init(id:String, author:User, emoji:String, emojiTitle: String, header:String, body:String, timestamp:Double) {
+    init(id:String, author:User, emoji:String, emojiTitle: String, header:String, body:String, timestamp:String) {
         self.id = id
         self.author = author
         self.emoji = emoji

@@ -40,6 +40,13 @@ class NewNoteEntryViewController: UIViewController {
         emojiIconLabel.text = emojiSection["emojiIcon"]
         emojiTitleLabel = emojiSection["emojiTitle"]!
         
+        //Date
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, MMM d 'at' hh:mm aaa"
+        let date = dateFormatter.string(from: now)
+        postTimeLabel.text = date
+        
         self.hideKeyboardWhenTappedAround()
 
     }
@@ -68,7 +75,8 @@ class NewNoteEntryViewController: UIViewController {
             "emojiTitle": emojiTitleLabel,
             "header": headerTextField.text!,
             "body": bodyTextView.text,
-            "timestamp": [".sv":"timestamp"]
+            //"timestamp": [".sv":"timestamp"]
+            "timestamp": Date().timeIntervalSince1970
             ] as [String: Any]
         
         postRef.setValue(postObject, withCompletionBlock: { error, ref in

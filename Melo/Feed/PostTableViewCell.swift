@@ -37,6 +37,7 @@ class PostTableViewCell: UITableViewCell {
         feelingLabel.text = post.emoji
         headerLabel.text = post.header
         bodyLabel.text = post.body
+        timeLabel.text = post.timestamp
         //reframeCount.text = String(post.reframes)
         //Need to add in the timelabel
         

@@ -17,6 +17,8 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
     var user: User?
     var indexPath: String?
     
+    let now = Date()
+    let pastDate = Date(timeIntervalSinceNow: -10)
     
     struct Storyboard {
         static let viewPostHeader = "ViewPostHeaderView"
@@ -67,6 +69,8 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
             guard let dict = snapshot.value as? [String: Any] else {return}
             guard let comment = dict["comment"] as? String else {return}
             guard let uid = dict["uid"] as? String else {return}
+            guard let commentDate = dict["commentDate"] as? Double else {return}
+
             
             let userRef = Database.database().reference().child("users/\(String(describing: uid))/profile")
             userRef.observe(.value, with: { snapshot in
@@ -74,8 +78,37 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
                 let username = value["username"]
                 let uid = dict["uid"]
                 let email = value["email"]
+                
+                let timestampDate = Date(timeIntervalSince1970: Double(commentDate))
+                let now = Date()
+                let components = Set<Calendar.Component>([.second, .minute, .hour, .day, .weekOfMonth, .year])
+                let diff = Calendar.current.dateComponents(components, from: timestampDate, to: now)
+                
+                var timeText = ""
+                if diff.second! <= 0 {
+                    timeText = "Just now"
+                }
+                else if diff.second! > 0 && diff.minute! == 0 {
+                    timeText = (diff.second == 1) ? "\(diff.second!)s ago" : "\(diff.second!)s ago"
+                }
+                else if diff.minute! > 0 && diff.hour! == 0 {
+                    timeText = (diff.minute == 1) ? "\(diff.minute!)m ago" : "\(diff.minute!)m ago"
+                }
+                else if diff.hour! > 0 && diff.day! == 0 {
+                    timeText = (diff.hour == 1) ? "\(diff.hour!)h ago" : "\(diff.hour!)h ago"
+                }
+                else if diff.day! > 0 && diff.weekOfMonth! == 0 {
+                    timeText = (diff.day == 1) ? "\(diff.day!)d ago" : "\(diff.day!)d ago"
+                }
+                else if diff.weekOfMonth! > 0 {
+                    timeText = (diff.weekOfMonth == 1) ? "\(diff.weekOfMonth!)w ago" : "\(diff.weekOfMonth!)w ago"
+                }
+                else if diff.year! > 0 {
+                    timeText = (diff.year == 1) ? "\(diff.year!)y ago" : "\(diff.year!)y ago"
+                }
+
                 let userProfile = User(uid: uid as! String, username: username as! String, email: email as! String)
-                let comment = Comment(uid: uid as! String, user: userProfile, comment: comment)
+                let comment = Comment(uid: uid as! String, user: userProfile, comment: comment, time: timeText)
                 self.comments.append(comment)
                 self.commentCollectionView.reloadData()
                 })
@@ -107,6 +140,21 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
             else {
                 print ("Error: \(error!.localizedDescription)")
             }
+        }
+    }
+    
+    func didLike(for cell: CommentInputAccessoryView) {
+        guard let postID = post?.id else {return}
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        
+        let values = [uid: 1]
+        
+        Database.database().reference().child("hugs").child(postID).updateChildValues(values) { (error, _) in
+            if let error = error {
+                print("Failed to hug post", error)
+                return
+            }
+            print("HUGGED")
         }
     }
     
@@ -156,3 +204,38 @@ extension ViewPostViewController: UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: view.frame.height, height: 200)
     }
 }
+
+extension Date {
+    func timeAgoDisplay() -> String {
+            let secondsAgo = Int(Date().timeIntervalSince(self))
+            
+            let minute = 60
+            let hour = 60 * minute
+            let day = 24 * hour
+            let week = 7 * day
+            let month = 4 * week
+            let year = 12 * month
+            
+            if secondsAgo < minute  {
+                print("\(secondsAgo)s ago")
+                return "\(secondsAgo)s ago"
+            } else if secondsAgo < hour {
+                return "\(secondsAgo)m ago"
+            } else if secondsAgo < day {
+                return "\(secondsAgo)hr ago"
+            } else if secondsAgo < week {
+                return "\(secondsAgo)d ago"
+            } else if secondsAgo < month {
+                return "\(secondsAgo)w ago"
+            } else if secondsAgo < year {
+                return "\(secondsAgo)mo ago"
+            }
+            return "\(secondsAgo)yr ago"
+    }
+}
+
+
+
+
+
+

@@ -12,6 +12,7 @@ class CommentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var commentTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,7 @@ class CommentCollectionViewCell: UICollectionViewCell {
         didSet {
             commentLabel.text = comment?.comment
             usernameLabel.text = comment?.user.username
+            commentTime.text = comment?.time
         }
     }
 

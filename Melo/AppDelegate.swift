@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import CoreData
+import AVFoundation
 
 //Setting up colors for Melo gradient.
 let primaryColor = UIColor(red: 116/255, green: 139/255, blue: 246/255, alpha: 1)

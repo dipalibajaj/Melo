@@ -11,6 +11,7 @@ import UIKit
 
 protocol CommentInputAccessoryViewDelegate {
     func didSend(for comment: String)
+    func didLike(for cell: CommentInputAccessoryView)
 }
 
 class CommentInputAccessoryView: UIView {
@@ -31,7 +32,7 @@ class CommentInputAccessoryView: UIView {
         text.translatesAutoresizingMaskIntoConstraints = false
         //text.placeholder = "Add a reframe..."
         text.textAlignment = .left
-        text.backgroundColor = #colorLiteral(red: 0.9784782529, green: 0.9650371671, blue: 0.9372026324, alpha: 1)
+        text.backgroundColor = #colorLiteral(red: 1, green: 0.9589243531, blue: 0.9180416465, alpha: 1)
         text.layer.cornerRadius = 50/2
         text.layer.masksToBounds = true
         text.isScrollEnabled = false
@@ -58,9 +59,10 @@ class CommentInputAccessoryView: UIView {
         let send = UIButton(type: .system)
         //let sendButton = UIImageView(image: #imageLiteral(resourceName: "arrowUp"))
         send.translatesAutoresizingMaskIntoConstraints = false
-        send.setTitle("Send", for: .normal)
+        send.setImage(UIImage(named: "send-button"), for: .normal)
+        //send.setTitle("Send", for: .normal)
         send.setTitleColor(#colorLiteral(red: 0.2901960784, green: 0.3725490196, blue: 0.937254902, alpha: 1), for: .normal)
-        send.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+        send.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
         send.addTarget(self, action: #selector(handlePostComment), for: .touchUpInside)
         return send
     }()
@@ -69,14 +71,14 @@ class CommentInputAccessoryView: UIView {
         let hug = UIButton()
         hug.translatesAutoresizingMaskIntoConstraints = false
         hug.setTitle("🤗", for: .normal)
-        hug.backgroundColor = #colorLiteral(red: 0.9784782529, green: 0.9650371671, blue: 0.9372026324, alpha: 1)
+        hug.backgroundColor = #colorLiteral(red: 1, green: 0.9589243531, blue: 0.9180416465, alpha: 1)
         hug.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         hug.contentEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         hug.layer.cornerRadius = 22
         hug.layer.masksToBounds = true
+        hug.addTarget(self, action: #selector(handleHug), for: .touchUpInside)
         return hug
     }()
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -126,6 +128,12 @@ class CommentInputAccessoryView: UIView {
         guard let commentText = commentTextView.text else {return}
         delegate?.didSend(for: commentText)
     }
+    
+    @objc func handleHug() {
+        print("You have been hugged")
+        delegate?.didLike(for: self)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

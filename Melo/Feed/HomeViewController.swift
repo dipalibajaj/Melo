@@ -70,8 +70,42 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let emojiTitle = dict["emojiTitle"] as? String,
                     let timestamp = dict["timestamp"] as? Double
                     {
+                        //Setting up the time.
+                        let timestampDate = Date(timeIntervalSince1970: Double(timestamp))
+                        let now = Date()
+                        let components = Set<Calendar.Component>([.second, .minute, .hour, .day, .weekOfMonth, .month, .year])
+                        let diff = Calendar.current.dateComponents(components, from: timestampDate, to: now)
+                        
+                        var timeText = ""
+                        if diff.second! <= 0 {
+                            timeText = "Just now"
+                        }
+                        else if diff.second! > 0 && diff.minute! == 0 {
+                            timeText = (diff.second == 1) ? "\(diff.second!)s ago" : "\(diff.second!)s ago"
+                        }
+                        else if diff.minute! > 0 && diff.hour! == 0 {
+                            timeText = (diff.minute == 1) ? "\(diff.minute!)m ago" : "\(diff.minute!)m ago"
+                        }
+                        else if diff.hour! > 0 && diff.day! == 0 {
+                            timeText = (diff.hour == 1) ? "\(diff.hour!)h ago" : "\(diff.hour!)h ago"
+                        }
+                        else if diff.day! > 0 && diff.weekOfMonth! == 0 {
+                            timeText = (diff.day == 1) ? "\(diff.day!)d ago" : "\(diff.day!)d ago"
+                        }
+                        else if diff.weekOfMonth! > 0 {
+                            timeText = (diff.weekOfMonth == 1) ? "\(diff.weekOfMonth!)w ago" : "\(diff.weekOfMonth!)w ago"
+                        }
+                        else if diff.month! > 0 {
+                            timeText = (diff.month == 1) ? "\(diff.month!)w ago" : "\(diff.month!)w ago"
+                        }
+                        else if diff.year! > 0 {
+                            timeText = (diff.year == 1) ? "\(diff.year!)y ago" : "\(diff.year!)y ago"
+                        }
+                        
+                    
+                        
                     let userProfile = User(uid: uid, username: username, email: email)
-                    let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, emojiTitle: emojiTitle, header: header, body: body, timestamp: timestamp)
+                    let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, emojiTitle: emojiTitle, header: header, body: body, timestamp: timeText)
                     tempPosts.append(post)
                     }
                 }
