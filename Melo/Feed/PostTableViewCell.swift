@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PostTableViewCell: UITableViewCell {
 
@@ -38,14 +39,14 @@ class PostTableViewCell: UITableViewCell {
         headerLabel.text = post.header
         bodyLabel.text = post.body
         timeLabel.text = post.timestamp
-        //reframeCount.text = String(post.reframes)
-        //Need to add in the timelabel
         
         hugLabel.text = "HUGS"
         hugLabel.addCharacterSpacing()
+        hugCount.text = String(post.hugs)
         
         reframeLabel.text = "REFRAMES"
         reframeLabel.addCharacterSpacing()
+        reframeCount.text = String(post.reframes)
     }
  
 }

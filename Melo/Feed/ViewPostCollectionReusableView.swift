@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewPostCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var bodyLabel: UILabel!
@@ -16,6 +17,10 @@ class ViewPostCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var feelingLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var hugCount: UILabel!
+    @IBOutlet weak var reframeCount: UILabel!
+    
+    var hug: Post?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +30,7 @@ class ViewPostCollectionReusableView: UICollectionReusableView {
         bodyLabel.sizeToFit()
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
         let screenWidth = UIScreen.main.bounds.size.width
-        widthConstraint.constant = screenWidth - (2*22)
+        widthConstraint.constant = screenWidth - (2*22)   
     }
     
     var post: Post? {
@@ -35,6 +40,9 @@ class ViewPostCollectionReusableView: UICollectionReusableView {
             emojiLabel.text = post?.emoji
             headerLabel.text = post?.header 
             bodyLabel.text = post?.body
+            hugCount.text = post?.hugs
+            reframeCount.text = post?.reframes
+            
         }
     }
     

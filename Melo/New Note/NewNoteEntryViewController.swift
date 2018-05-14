@@ -76,7 +76,10 @@ class NewNoteEntryViewController: UIViewController {
             "header": headerTextField.text!,
             "body": bodyTextView.text,
             //"timestamp": [".sv":"timestamp"]
-            "timestamp": Date().timeIntervalSince1970
+            "timestamp": Date().timeIntervalSince1970,
+            "hugCount" : 0,
+            "commentCount" : 0,
+            "draft" : 0
             ] as [String: Any]
         
         postRef.setValue(postObject, withCompletionBlock: { error, ref in
@@ -90,7 +93,49 @@ class NewNoteEntryViewController: UIViewController {
         })
     }
  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toProfile" {
+            let viewController = segue.destination as! ProfileViewController
+            viewController.tabBarController?.tabBar.isHidden = false
+            tabBarController?.selectedIndex = 0
+            viewController.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+
+
+    @IBAction func handleSavePost(_ sender: Any) {
+        guard let userProfile = UserService.currentUserProfile else { return }
+        
+        let postRef = Database.database().reference().child("posts").childByAutoId()
+        
+        let postObject = [
+            "author": [
+                "uid": userProfile.uid,
+                "username": userProfile.username,
+                "email": userProfile.email
+            ],
+            "emoji": emojiIconLabel.text!,
+            "emojiTitle": emojiTitleLabel,
+            "header": headerTextField.text!,
+            "body": bodyTextView.text,
+            //"timestamp": [".sv":"timestamp"]
+            "timestamp": Date().timeIntervalSince1970,
+            "hugCount" : 0,
+            "commentCount" : 0,
+            "draft" : 1
+            ] as [String: Any]
+        
+        postRef.setValue(postObject, withCompletionBlock: { error, ref in
+            if error == nil {
+                //self.tabBarController?.setViewControllers = self.tabBarController?.viewControllers ?.index(of: 4)
+                self.performSegue(withIdentifier: "toProfile", sender: self)
+            } else {
+                //Handle the error
+            }
+        })
+    }
     
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

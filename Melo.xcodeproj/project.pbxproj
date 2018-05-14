@@ -26,6 +26,9 @@
 		F304E7462088D205006268B8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304E7452088D205006268B8 /* Post.swift */; };
 		F30A3B3F2091257700577633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A3B3E2091257700577633 /* User.swift */; };
 		F30A3B4220915E8F00577633 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30A3B4120915E8F00577633 /* LearnViewController.swift */; };
+		F327327520A7D1040068B7A7 /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327327420A7D1040068B7A7 /* FirebaseUtils.swift */; };
+		F327327820A7DF880068B7A7 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327327620A7DF880068B7A7 /* ProfileHeaderTableViewCell.swift */; };
+		F327327920A7DF880068B7A7 /* ProfileHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F327327720A7DF880068B7A7 /* ProfileHeaderTableViewCell.xib */; };
 		F353ABEE2098EC3800DA96F3 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353ABED2098EC3800DA96F3 /* ViewPostViewController.swift */; };
 		F353ABF8209AB7ED00DA96F3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353ABF7209AB7ED00DA96F3 /* Comment.swift */; };
 		F376440C209BC56A0074EFD3 /* CommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376440A209BC56A0074EFD3 /* CommentCollectionViewCell.swift */; };
@@ -52,6 +55,7 @@
 		F39018F42093C9CD0012BB33 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39018F32093C9CD0012BB33 /* EmojiCollectionViewCell.swift */; };
 		F39018FA2093DD6C0012BB33 /* NewNoteEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39018F92093DD6C0012BB33 /* NewNoteEntryViewController.swift */; };
 		F39018FD209502EB0012BB33 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39018FC209502EB0012BB33 /* UserService.swift */; };
+		F3ABCD5A20A933FB0057CC88 /* PresentViewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ABCD5920A933FB0057CC88 /* PresentViewPost.swift */; };
 		F3B6DE23208A340B00CBD719 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE22208A340B00CBD719 /* MenuViewController.swift */; };
 		F3B6DE29208A554C00CBD719 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */; };
 		F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */; };
@@ -103,6 +107,9 @@
 		F304E7452088D205006268B8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F30A3B3E2091257700577633 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F30A3B4120915E8F00577633 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		F327327420A7D1040068B7A7 /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
+		F327327620A7DF880068B7A7 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		F327327720A7DF880068B7A7 /* ProfileHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		F353ABED2098EC3800DA96F3 /* ViewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostViewController.swift; sourceTree = "<group>"; };
 		F353ABF7209AB7ED00DA96F3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F376440A209BC56A0074EFD3 /* CommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -135,6 +142,7 @@
 		F39018F32093C9CD0012BB33 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 		F39018F92093DD6C0012BB33 /* NewNoteEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteEntryViewController.swift; sourceTree = "<group>"; };
 		F39018FC209502EB0012BB33 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F3ABCD5920A933FB0057CC88 /* PresentViewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewPost.swift; sourceTree = "<group>"; };
 		F3B6DE22208A340B00CBD719 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		F3B6DE2A208A575A00CBD719 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B6DE28208A554C00CBD719 /* HelperExtensions.swift */,
+				F327327420A7D1040068B7A7 /* FirebaseUtils.swift */,
 				F3B6DE2E208A908500CBD719 /* RoundedWhiteButton.swift */,
 			);
 			path = Helper;
@@ -288,6 +297,9 @@
 				F3764426209FEAC10074EFD3 /* Learn */,
 				F39018FB2093DDA70012BB33 /* New Note */,
 				F3B6DE30208A99D400CBD719 /* ProfileViewController.swift */,
+				F327327620A7DF880068B7A7 /* ProfileHeaderTableViewCell.swift */,
+				F327327720A7DF880068B7A7 /* ProfileHeaderTableViewCell.xib */,
+				F3ABCD5920A933FB0057CC88 /* PresentViewPost.swift */,
 				F379C80C2084F75E00FEC4B9 /* Assets.xcassets */,
 				F379C80E2084F75E00FEC4B9 /* LaunchScreen.storyboard */,
 				F304E7442088D1BF006268B8 /* Models */,
@@ -455,6 +467,7 @@
 				F304E7392087ED53006268B8 /* OpenSans-Bold.ttf in Resources */,
 				F304E7342087ED53006268B8 /* OpenSans-Semibold.ttf in Resources */,
 				F304E7362087ED53006268B8 /* OpenSans-Italic.ttf in Resources */,
+				F327327920A7DF880068B7A7 /* ProfileHeaderTableViewCell.xib in Resources */,
 				F376442D20A0CDC90074EFD3 /* CheersToMe.mp3 in Resources */,
 				F304E7372087ED53006268B8 /* OpenSans-ExtraBold.ttf in Resources */,
 				F304E73A2087ED53006268B8 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -578,16 +591,19 @@
 				F376442920A0B72C0074EFD3 /* AudioPlayerViewController.swift in Sources */,
 				F3B6DE29208A554C00CBD719 /* HelperExtensions.swift in Sources */,
 				F376441F209FCF280074EFD3 /* ThinkingPatternsCollectionViewCell.swift in Sources */,
+				F3ABCD5A20A933FB0057CC88 /* PresentViewPost.swift in Sources */,
 				F3B6DE2F208A908500CBD719 /* RoundedWhiteButton.swift in Sources */,
 				F39018FD209502EB0012BB33 /* UserService.swift in Sources */,
 				F379C8032084F75D00FEC4B9 /* AppDelegate.swift in Sources */,
 				F39018F42093C9CD0012BB33 /* EmojiCollectionViewCell.swift in Sources */,
 				F3B6DE23208A340B00CBD719 /* MenuViewController.swift in Sources */,
 				F304E7272087DE40006268B8 /* PostTableViewCell.swift in Sources */,
+				F327327520A7D1040068B7A7 /* FirebaseUtils.swift in Sources */,
 				F3764423209FD0E80074EFD3 /* LearnData.swift in Sources */,
 				F30A3B4220915E8F00577633 /* LearnViewController.swift in Sources */,
 				F3764425209FDAF80074EFD3 /* GettingStartedCollectionViewCell.swift in Sources */,
 				F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */,
+				F327327820A7DF880068B7A7 /* ProfileHeaderTableViewCell.swift in Sources */,
 				F376441A209EB6A20074EFD3 /* ViewPostCollectionReusableView.swift in Sources */,
 				F353ABF8209AB7ED00DA96F3 /* Comment.swift in Sources */,
 				F376441D209FCEDE0074EFD3 /* ThinkingPatternsViewController.swift in Sources */,

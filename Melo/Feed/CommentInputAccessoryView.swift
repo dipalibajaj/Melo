@@ -11,13 +11,14 @@ import UIKit
 
 protocol CommentInputAccessoryViewDelegate {
     func didSend(for comment: String)
-    func didLike(for cell: CommentInputAccessoryView)
+    func didHug(for cell: CommentInputAccessoryView)
 }
 
 class CommentInputAccessoryView: UIView {
     
     var delegate: CommentInputAccessoryViewDelegate?
-    
+    var post: Post?
+            
     func clearCommentTextView() {
         commentTextView.text = nil
         showPlaceholderLabel()
@@ -67,7 +68,7 @@ class CommentInputAccessoryView: UIView {
         return send
     }()
     
-    let hugButton: UIButton = {
+        let hugButton: UIButton = {
         let hug = UIButton()
         hug.translatesAutoresizingMaskIntoConstraints = false
         hug.setTitle("🤗", for: .normal)
@@ -88,8 +89,7 @@ class CommentInputAccessoryView: UIView {
         addSubview(sendButton)
         addSubview(hugButton)
         addSubview(placeholderLabel)
-        
-        
+
         if #available(iOS 11.0, *) {
             commentTextView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
             hugButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
@@ -127,11 +127,21 @@ class CommentInputAccessoryView: UIView {
     @objc func handlePostComment() {
         guard let commentText = commentTextView.text else {return}
         delegate?.didSend(for: commentText)
+        
     }
     
     @objc func handleHug() {
         print("You have been hugged")
-        delegate?.didLike(for: self)
+        delegate?.didHug(for: self)
+    }
+    
+    func changeEmoji() {
+        if post?.hasHugged == true {
+            hugButton.setTitle("🌸", for: .normal)
+        }
+        else if post?.hasHugged == false {
+            hugButton.setTitle("🔥", for: .normal)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

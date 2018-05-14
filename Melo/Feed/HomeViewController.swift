@@ -16,6 +16,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var posts = [Post]()
     var selectedIndexPath: Int!
     
+    let presentViewPost = PresentViewPost()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,8 +70,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let body = dict["body"] as? String,
                     let emoji = dict["emoji"] as? String,
                     let emojiTitle = dict["emojiTitle"] as? String,
-                    let timestamp = dict["timestamp"] as? Double
+                    let timestamp = dict["timestamp"] as? Double,
+                    let hugCount = dict["hugCount"] as? Int,
+                    let commentCount = dict["commentCount"] as? Int,
+                    let draft = dict["draft"] as? Int
                     {
+                        //print(hugCount)
                         //Setting up the time.
                         let timestampDate = Date(timeIntervalSince1970: Double(timestamp))
                         let now = Date()
@@ -101,12 +107,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         else if diff.year! > 0 {
                             timeText = (diff.year == 1) ? "\(diff.year!)y ago" : "\(diff.year!)y ago"
                         }
-                        
-                    
-                        
-                    let userProfile = User(uid: uid, username: username, email: email)
-                    let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, emojiTitle: emojiTitle, header: header, body: body, timestamp: timeText)
-                    tempPosts.append(post)
+
+                        if draft == 0 {
+                            let userProfile = User(uid: uid, username: username, email: email)
+                            let post = Post(id: childSnapshot.key, author: userProfile, emoji: emoji, emojiTitle: emojiTitle, header: header, body: body, timestamp: timeText, hugs: String(hugCount), reframes: String(commentCount))
+                            tempPosts.append(post)
+                        }
                     }
                 }
             //Reverse post order!
@@ -115,11 +121,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeToPost" {
             let viewController = segue.destination as! ViewPostViewController
             let post = posts[selectedIndexPath]
             viewController.post = post
+            
+            //let attributes = tableView.
         }
     }
 
@@ -144,10 +153,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         selectedIndexPath = indexPath.row
         performSegue(withIdentifier: "HomeToPost", sender: self)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        inputAccessoryView?.resignFirstResponder()
-    }
-    
 }
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentViewPost
+    }
+}
+
+
+
+
+
 

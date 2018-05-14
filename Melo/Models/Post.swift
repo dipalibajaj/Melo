@@ -17,9 +17,12 @@ class Post {
     var header:String
     var body:String
     var timestamp: String
-    //var reframes: Int
+    var hugs: String
+    var reframes: String
+
+    var hasHugged = false
     
-    init(id:String, author:User, emoji:String, emojiTitle: String, header:String, body:String, timestamp:String) {
+    init(id:String, author:User, emoji:String, emojiTitle: String, header:String, body:String, timestamp:String, hugs:String, reframes: String) {
         self.id = id
         self.author = author
         self.emoji = emoji
@@ -27,7 +30,7 @@ class Post {
         self.header = header
         self.body = body
         self.timestamp = timestamp
-        //self.reframes = reframes
+        self.hugs = hugs
+        self.reframes = reframes
     }
- 
 }

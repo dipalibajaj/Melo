@@ -29,5 +29,4 @@ class CommentCollectionViewCell: UICollectionViewCell {
             commentTime.text = comment?.time
         }
     }
-
 }

@@ -47,18 +47,13 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
         commentCollectionView.collectionViewLayout.invalidateLayout()
     }
 
     @IBAction func closeButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     var comments = [Comment]()
     fileprivate func fetchComments() {
         
@@ -118,7 +113,9 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
     lazy var containerView: CommentInputAccessoryView = {
         let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 60)
         let commentInputAccessoryView = CommentInputAccessoryView(frame: frame)
+        commentInputAccessoryView.backgroundColor = .white
         commentInputAccessoryView.delegate = self
+
         return commentInputAccessoryView
     }()
     
@@ -136,6 +133,7 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
             if error == nil {
                 self.containerView.clearCommentTextView()
                 self.containerView.clearKeyboard()
+                self.commentCounter()
             }
             else {
                 print ("Error: \(error!.localizedDescription)")
@@ -143,21 +141,81 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
         }
     }
     
-    func didLike(for cell: CommentInputAccessoryView) {
+    func commentCounter() {
         guard let postID = post?.id else {return}
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        
-        let values = [uid: 1]
-        
-        Database.database().reference().child("hugs").child(postID).updateChildValues(values) { (error, _) in
-            if let error = error {
-                print("Failed to hug post", error)
-                return
+        let ref = Database.database().reference().child("posts").child(postID)
+        ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            if var post = currentData.value as? [String : AnyObject] {
+                var commentCount = post["commentCount"] as? Int ?? 0
+                commentCount += 1
+                post["commentCount"] = commentCount as AnyObject?
+                currentData.value = post
+                self.post?.reframes = String(commentCount)
+                
+                DispatchQueue.main.async {
+                    self.commentCollectionView.reloadData()
+                }
+                return TransactionResult.success(withValue: currentData)
             }
-            print("HUGGED")
-        }
+            return TransactionResult.success(withValue: currentData)
+        })
     }
     
+    func didHug(for cell: CommentInputAccessoryView) {
+        guard let postID = self.post?.id else {return}
+        
+        let ref = Database.database().reference().child("posts").child(postID)
+        ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            if var post = currentData.value as? [String : AnyObject], let uid = Auth.auth().currentUser?.uid {
+                var hugs: Dictionary<String, Bool>
+                hugs = post["hugs"] as? [String : Bool] ?? [:]
+                var hugCount = post["hugCount"] as? Int ?? 0
+                if let _ = hugs[uid] {
+                    // Unhug the post and remove self from hugs
+                    hugCount -= 1
+                    hugs.removeValue(forKey: uid)
+                } else {
+                    // Hug the post and add self to hugs
+                    hugCount += 1
+                    hugs[uid] = true
+                }
+                post["hugCount"] = hugCount as AnyObject?
+                post["hugs"] = hugs as AnyObject?
+                
+                // Set value and report transaction success
+                currentData.value = post
+
+                
+                self.post?.hasHugged = !(self.post?.hasHugged)!
+                
+                DispatchQueue.main.async {
+                    if self.post?.hasHugged == true {
+                        self.containerView.hugButton.setTitle("🌸", for: .normal)
+                    }
+                    else if self.post?.hasHugged == false {
+                        self.containerView.hugButton.setTitle("🤗", for: .normal)
+                    }
+                }
+                
+                self.post?.hugs = String(hugCount)
+
+                DispatchQueue.main.async {
+                    self.commentCollectionView.reloadData()
+                }
+                
+                return TransactionResult.success(withValue: currentData)
+            }
+            return TransactionResult.success(withValue: currentData)
+            
+        })
+            {
+            (error, committed, snapshot) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
    
     //Setting up the keyboard accessory view for comments.
     override var inputAccessoryView: UIView? {
@@ -195,42 +253,13 @@ extension ViewPostViewController: UICollectionViewDelegate, UICollectionViewData
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if let post = self.post {
-            let approxWidthOfBodyText = view.frame.width - 22 - 22 - 22
+            let approxWidthOfBodyText = view.frame.width - 22 - 22 - 18
             let size = CGSize(width: approxWidthOfBodyText, height: 1000)
             let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)]
             let estimatedFrame = NSString(string: post.body).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
-            return CGSize(width: view.frame.height, height: estimatedFrame.height + 218)
+            return CGSize(width: view.frame.height, height: estimatedFrame.height + 222)
         }
         return CGSize(width: view.frame.height, height: 200)
-    }
-}
-
-extension Date {
-    func timeAgoDisplay() -> String {
-            let secondsAgo = Int(Date().timeIntervalSince(self))
-            
-            let minute = 60
-            let hour = 60 * minute
-            let day = 24 * hour
-            let week = 7 * day
-            let month = 4 * week
-            let year = 12 * month
-            
-            if secondsAgo < minute  {
-                print("\(secondsAgo)s ago")
-                return "\(secondsAgo)s ago"
-            } else if secondsAgo < hour {
-                return "\(secondsAgo)m ago"
-            } else if secondsAgo < day {
-                return "\(secondsAgo)hr ago"
-            } else if secondsAgo < week {
-                return "\(secondsAgo)d ago"
-            } else if secondsAgo < month {
-                return "\(secondsAgo)w ago"
-            } else if secondsAgo < year {
-                return "\(secondsAgo)mo ago"
-            }
-            return "\(secondsAgo)yr ago"
     }
 }
 
