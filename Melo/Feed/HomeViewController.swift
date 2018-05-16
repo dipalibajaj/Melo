@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController {
 
-    var tableView: UITableView!
+    @IBOutlet weak var homeCollectionView: UICollectionView!
     
     var posts = [Post]()
     var selectedIndexPath: Int!
@@ -24,31 +24,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         //Remove divider for navigation controller.
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         
-        tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView.backgroundColor = #colorLiteral(red: 1, green: 0.9490196078, blue: 0.8980392157, alpha: 1)
-        tableView.separatorStyle = .none
+        homeCollectionView.delegate = self
+        homeCollectionView.dataSource = self
         
-        let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "postCell")
-        view.addSubview(tableView)
-        
-        var layoutGuide:UILayoutGuide!
-        
-        if #available(iOS 11.0, *) {
-            layoutGuide = view.safeAreaLayoutGuide
-        } else {
-            layoutGuide = view.layoutMarginsGuide
-        }
-        
-        tableView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
-        tableView.reloadData()
+        homeCollectionView.register(UINib.init(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "postCollectionCell")
         
         observePosts()
     }
@@ -117,41 +96,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             //Reverse post order!
             self.posts = tempPosts.reversed()
-            self.tableView.reloadData()
+            self.homeCollectionView.reloadData()
             })
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeToPost" {
             let viewController = segue.destination as! ViewPostViewController
             let post = posts[selectedIndexPath]
             viewController.post = post
-            
-            //let attributes = tableView.
         }
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-        cell.selectionStyle = .none
-        cell.set(post: posts[indexPath.row])
-        return cell
-    }
- 
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        selectedIndexPath = indexPath.row
-        performSegue(withIdentifier: "HomeToPost", sender: self)
     }
 }
 
@@ -161,7 +115,25 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
-
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCollectionCell", for: indexPath) as! PostCollectionViewCell
+        cell.set(post: posts[indexPath.row])
+        //cell.layer.transform = CATransform3D.init()
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        homeCollectionView.deselectItem(at: indexPath, animated: true)
+        selectedIndexPath = indexPath.row
+        performSegue(withIdentifier: "HomeToPost", sender: self)
+    }
+    
+}
 
 
 

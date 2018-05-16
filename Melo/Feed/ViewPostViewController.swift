@@ -190,10 +190,10 @@ class ViewPostViewController: UIViewController, CommentInputAccessoryViewDelegat
                 
                 DispatchQueue.main.async {
                     if self.post?.hasHugged == true {
-                        self.containerView.hugButton.setTitle("🌸", for: .normal)
+                        self.containerView.hugButton.setImage(UIImage (named: "smiley-active-icon"), for: .normal)
                     }
                     else if self.post?.hasHugged == false {
-                        self.containerView.hugButton.setTitle("🤗", for: .normal)
+                        self.containerView.hugButton.setImage(UIImage (named: "smiley-icon"), for: .normal)
                     }
                 }
                 
@@ -257,7 +257,7 @@ extension ViewPostViewController: UICollectionViewDelegate, UICollectionViewData
             let size = CGSize(width: approxWidthOfBodyText, height: 1000)
             let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)]
             let estimatedFrame = NSString(string: post.body).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
-            return CGSize(width: view.frame.height, height: estimatedFrame.height + 222)
+            return CGSize(width: view.frame.height, height: estimatedFrame.height + 220)
         }
         return CGSize(width: view.frame.height, height: 200)
     }

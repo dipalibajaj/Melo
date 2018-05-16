@@ -17,9 +17,9 @@ class PresentViewPost: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let destination = transitionContext.viewController(forKey: .to) as? ViewPostViewController
+        let destination = transitionContext.viewController(forKey: .to) as! ViewPostViewController
         let containterView = transitionContext.containerView
-        containterView.addSubview((destination?.view)!)
+        containterView.addSubview((destination.view)!)
         
         //Initial state
         let animator = UIViewPropertyAnimator(duration: 5, dampingRatio: 0.7) {
@@ -32,5 +32,6 @@ class PresentViewPost: NSObject, UIViewControllerAnimatedTransitioning {
             
             transitionContext.completeTransition(true)
         }
+        animator.startAnimation()
     }
 }

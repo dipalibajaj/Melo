@@ -71,9 +71,8 @@ class CommentInputAccessoryView: UIView {
         let hugButton: UIButton = {
         let hug = UIButton()
         hug.translatesAutoresizingMaskIntoConstraints = false
-        hug.setTitle("🤗", for: .normal)
         hug.backgroundColor = #colorLiteral(red: 1, green: 0.9589243531, blue: 0.9180416465, alpha: 1)
-        hug.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        hug.setImage(UIImage (named: "smiley-icon"), for: .normal)
         hug.contentEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         hug.layer.cornerRadius = 22
         hug.layer.masksToBounds = true
@@ -133,15 +132,6 @@ class CommentInputAccessoryView: UIView {
     @objc func handleHug() {
         print("You have been hugged")
         delegate?.didHug(for: self)
-    }
-    
-    func changeEmoji() {
-        if post?.hasHugged == true {
-            hugButton.setTitle("🌸", for: .normal)
-        }
-        else if post?.hasHugged == false {
-            hugButton.setTitle("🔥", for: .normal)
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -10,12 +10,19 @@ import Foundation
 import UIKit
 import Firebase
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController {
 
-    var profileTableView: UITableView!
+    @IBOutlet weak var profileCollectionView: UICollectionView!
+    
+    var post: Post?
+    var user: User?
     
     var posts = [Post]()
     var selectedIndexPath: Int!
+    
+    struct Storyboard {
+        static let viewPostHeader = "ProfileHeaderView"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,39 +36,24 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             if let dict = snapshot.value as? [String: Any] {
                 let username = dict["username"] as? String
-                self.navigationItem.title = "@" + (username)!
+                self.navigationItem.title = (username)!
             }
         })
         
-        profileTableView = UITableView(frame: view.bounds, style: .plain)
-        profileTableView.backgroundColor = #colorLiteral(red: 1, green: 0.9490196078, blue: 0.8980392157, alpha: 1)
-        profileTableView.separatorStyle = .none
+        profileCollectionView.delegate = self
+        profileCollectionView.dataSource = self
         
-        let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
-        profileTableView.register(cellNib, forCellReuseIdentifier: "postCell")
-        let headerNib = UINib(nibName: "ProfileHeaderTableViewCell", bundle: nil)
-        profileTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "profileHeader")
-                
-        view.addSubview(profileTableView)
-        var layoutGuide:UILayoutGuide!
-        
-        if #available(iOS 11.0, *) {
-            layoutGuide = view.safeAreaLayoutGuide
-        } else {
-            layoutGuide = view.layoutMarginsGuide
-        }
-        
-        profileTableView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
-        profileTableView.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: 10).isActive = true
-        profileTableView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
-        profileTableView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
-        
-        profileTableView.delegate = self 
-        profileTableView.dataSource = self
-        profileTableView.reloadData()
+    profileCollectionView.register(UINib.init(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "postCollectionCell")
+       profileCollectionView.register(UINib(nibName: "ProfileCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: "profileHeader")
         
         observePosts()
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        profileCollectionView.collectionViewLayout.invalidateLayout()
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -130,7 +122,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             //Reverse post order!
             self.posts = tempPosts.reversed()
-            self.profileTableView.reloadData()
+            self.profileCollectionView.reloadData()
         })
         
         
@@ -140,35 +132,51 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         //Log out user.
         try! Auth.auth().signOut()
     }
+}
+
+extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ProfileToPost" {
             let viewController = segue.destination as! ViewPostViewController
             let post = posts[selectedIndexPath]
             viewController.post = post
+            
+            //let attributes = tableView.
         }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = profileTableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-        cell.selectionStyle = .none
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCollectionCell", for: indexPath) as! PostCollectionViewCell
         cell.set(post: posts[indexPath.row])
         return cell
     }
     
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        profileTableView.deselectRow(at: indexPath, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        profileCollectionView.deselectItem(at: indexPath, animated: true)
         selectedIndexPath = indexPath.row
         performSegue(withIdentifier: "ProfileToPost", sender: self)
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "profileHeader", for: indexPath) as! ProfileCollectionReusableView
+        let currentUser = self.user
+        headerView.user = currentUser
+        return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: 375, height: 180)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+    }
 }
+
+
+

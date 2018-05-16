@@ -32,11 +32,31 @@
                     <view key="view" contentMode="scaleToFill" id="ZmB-Yt-6mp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="500.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sH4-Vj-h9Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="500.5"/>
+                                <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lK4-BB-Waq">
+                                    <size key="itemSize" width="375" height="146"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sH4-Vj-h9Y" firstAttribute="leading" secondItem="srH-u7-Lby" secondAttribute="leading" id="D7c-np-qzY"/>
+                            <constraint firstItem="sH4-Vj-h9Y" firstAttribute="bottom" secondItem="srH-u7-Lby" secondAttribute="bottom" id="Jxt-YW-f8F"/>
+                            <constraint firstItem="sH4-Vj-h9Y" firstAttribute="trailing" secondItem="srH-u7-Lby" secondAttribute="trailing" id="L9c-at-1ey"/>
+                            <constraint firstItem="sH4-Vj-h9Y" firstAttribute="top" secondItem="srH-u7-Lby" secondAttribute="top" id="dvy-kP-nV5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="srH-u7-Lby"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="63l-bh-8KQ"/>
                     <connections>
+                        <outlet property="homeCollectionView" destination="sH4-Vj-h9Y" id="3Pl-02-uxF"/>
                         <segue destination="Fnf-xP-90i" kind="presentation" identifier="HomeToPost" id="6Ie-0l-FQN"/>
                     </connections>
                 </viewController>
@@ -352,7 +372,26 @@
                     <view key="view" contentMode="scaleToFill" id="RUz-M4-qJA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="500.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lLW-bn-iUx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="500.5"/>
+                                <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FRk-ea-kEb">
+                                    <size key="itemSize" width="375" height="146"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lLW-bn-iUx" firstAttribute="trailing" secondItem="WWH-OH-w40" secondAttribute="trailing" id="1rH-yK-SSg"/>
+                            <constraint firstItem="lLW-bn-iUx" firstAttribute="leading" secondItem="WWH-OH-w40" secondAttribute="leading" id="4If-Cr-Mvg"/>
+                            <constraint firstItem="lLW-bn-iUx" firstAttribute="bottom" secondItem="WWH-OH-w40" secondAttribute="bottom" id="QNQ-Gz-2PF"/>
+                            <constraint firstItem="lLW-bn-iUx" firstAttribute="top" secondItem="WWH-OH-w40" secondAttribute="top" id="csQ-Ra-46y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WWH-OH-w40"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZBo-3a-BVf">
@@ -363,12 +402,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="profileCollectionView" destination="lLW-bn-iUx" id="UVF-LU-1K6"/>
                         <segue destination="Fnf-xP-90i" kind="presentation" identifier="ProfileToPost" id="I9n-Ut-VtL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Efv-41-1Ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10673" y="928"/>
+            <point key="canvasLocation" x="10672.799999999999" y="927.88605697151434"/>
         </scene>
         <!--Learn-->
         <scene sceneID="ryF-4c-if3">
@@ -728,14 +768,14 @@
             <objects>
                 <viewController title="AudioPlayerViewController" id="B0f-IT-Tyh" customClass="AudioPlayerViewController" customModule="Melo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iRp-9n-bKW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-card" translatesAutoresizingMaskIntoConstraints="NO" id="zgL-23-EmX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQQ-uC-0Qe">
-                                <rect key="frame" x="325" y="30" width="28" height="28"/>
+                                <rect key="frame" x="325" y="50" width="28" height="28"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OLL-jp-Ed2">
                                     <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -779,13 +819,13 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Being a good listener" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeL-DR-UNM">
-                                <rect key="frame" x="34" y="90" width="307" height="95.5"/>
+                                <rect key="frame" x="34" y="110" width="307" height="95.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GU-zT-h4H">
-                                <rect key="frame" x="260.5" y="112" width="68.5" height="36"/>
+                                <rect key="frame" x="260.5" y="325.5" width="68.5" height="36"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Forward">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -795,7 +835,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo2-Vd-NmX">
-                                <rect key="frame" x="62" y="112" width="59" height="36"/>
+                                <rect key="frame" x="62" y="325.5" width="59" height="36"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Rewind">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -805,7 +845,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9wN-r0-5NT">
-                                <rect key="frame" x="32" y="130" width="311" height="31"/>
+                                <rect key="frame" x="32" y="537" width="311" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.53705033445277783" green="0.72549019609999998" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.68627450980000004" green="0.72549019609999998" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="1" green="0.94901960780000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -814,7 +854,7 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVY-QW-kKs">
-                                <rect key="frame" x="163.5" y="112" width="48" height="36"/>
+                                <rect key="frame" x="163.5" y="325.5" width="48" height="36"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Pause">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -824,13 +864,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwc-44-CNk">
-                                <rect key="frame" x="302" y="168" width="39" height="17"/>
+                                <rect key="frame" x="302" y="575" width="39" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSP-Q2-mTh">
-                                <rect key="frame" x="34" y="168" width="38" height="17"/>
+                                <rect key="frame" x="34" y="575" width="38" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -888,11 +928,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQF-3o-mvG">
-                                <rect key="frame" x="67" y="230" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lh-8Q-DUO">
                                 <rect key="frame" x="82" y="567" width="211" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -925,6 +960,10 @@
                                     <segue destination="k5Z-vZ-ZSX" kind="presentation" id="Rhh-UM-rOX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo/melo-white" translatesAutoresizingMaskIntoConstraints="NO" id="SuE-4A-yYR">
+                                <rect key="frame" x="140" y="316" width="95" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.37254901960784315" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1526,17 +1565,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo/melo-white" width="692" height="224"/>
         <image name="blue-card" width="106" height="140"/>
         <image name="core-discover" width="750" height="812"/>
-        <image name="feed-icon" width="25" height="25"/>
-        <image name="feed-icon-active" width="25" height="25"/>
+        <image name="feed-icon" width="26" height="26"/>
+        <image name="feed-icon-active" width="26" height="26"/>
         <image name="learn-icon" width="32" height="23"/>
         <image name="learn-icon-active" width="32" height="23"/>
         <image name="new-note-icon" width="25" height="25"/>
         <image name="new-note-icon-active" width="25" height="25"/>
         <image name="note-close-icon" width="12" height="12"/>
-        <image name="notification-icon" width="27" height="26"/>
-        <image name="notification-icon-active" width="27" height="26"/>
+        <image name="notification-icon" width="23" height="26"/>
+        <image name="notification-icon-active" width="23" height="26"/>
         <image name="notification-illustration" width="375" height="812"/>
         <image name="play-icon" width="24" height="24"/>
         <image name="profile-icon" width="26" height="25"/>
@@ -1547,7 +1587,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="6Ie-0l-FQN"/>
         <segue reference="tob-JM-VOO"/>
-        <segue reference="Uz4-Uz-hrm"/>
+        <segue reference="cCI-Da-Ifl"/>
         <segue reference="DgJ-o3-Yzj"/>
     </inferredMetricsTieBreakers>
 </document>

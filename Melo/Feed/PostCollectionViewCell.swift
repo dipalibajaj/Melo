@@ -1,16 +1,15 @@
 //
-//  PostTableViewCell.swift
+//  PostCollectionViewCell.swift
 //  Melo
 //
-//  Created by Dipali Bajaj on 4/18/18.
+//  Created by Dipali Bajaj on 5/14/18.
 //  Copyright © 2018 Dipali Bajaj. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class PostTableViewCell: UITableViewCell {
-
+class PostCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var feelingLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
@@ -21,16 +20,10 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var hugCount: UILabel!
     @IBOutlet weak var reframeLabel: UILabel!
     @IBOutlet weak var hugLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func set(post:Post) {
@@ -48,5 +41,5 @@ class PostTableViewCell: UITableViewCell {
         reframeLabel.addCharacterSpacing()
         reframeCount.text = String(post.reframes)
     }
- 
+
 }
