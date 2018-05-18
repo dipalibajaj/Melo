@@ -19,6 +19,7 @@ class ViewPostCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var hugCount: UILabel!
     @IBOutlet weak var reframeCount: UILabel!
+    @IBOutlet weak var timestamp: UILabel!
     
     var hug: Post?
     
@@ -42,7 +43,7 @@ class ViewPostCollectionReusableView: UICollectionReusableView {
             bodyLabel.text = post?.body
             hugCount.text = post?.hugs
             reframeCount.text = post?.reframes
-            
+            timestamp.text = post?.timestamp
         }
     }
     

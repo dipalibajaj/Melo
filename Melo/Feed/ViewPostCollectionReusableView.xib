@@ -152,6 +152,7 @@
                 <outlet property="headerLabel" destination="LDh-2b-NwD" id="YTu-H9-xzs"/>
                 <outlet property="hugCount" destination="INn-Fz-eqE" id="0EM-Yd-NEp"/>
                 <outlet property="reframeCount" destination="TpX-F7-Pkr" id="0BC-C4-dcf"/>
+                <outlet property="timestamp" destination="p1E-VU-SOl" id="Tdn-Up-YA0"/>
                 <outlet property="usernameLabel" destination="Qpk-PI-12P" id="2EZ-Y2-EYB"/>
                 <outlet property="widthConstraint" destination="LjD-qE-9Uc" id="J97-CC-k3q"/>
             </connections>

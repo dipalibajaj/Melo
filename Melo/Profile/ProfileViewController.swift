@@ -127,11 +127,6 @@ class ProfileViewController: UIViewController {
         
         
     }
-    
-    @IBAction func handleLogout(_ target: UIBarButtonItem) {
-        //Log out user.
-        try! Auth.auth().signOut()
-    }
 }
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
