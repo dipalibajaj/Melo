@@ -16,46 +16,94 @@ class LearnData: NSObject {
 let thinkingPatterns = [
     [
         "thinkingPatternTitle":"Filtering",
-        "thinkingPatternImage": "orange-card",
-    ],
-    [
-        "thinkingPatternTitle":"Black & White Thinking",
-        "thinkingPatternImage": "orange-card"
+        "thinkingPatternImage": "think-1",
     ],
     [
         "thinkingPatternTitle":"Personalization",
-        "thinkingPatternImage": "orange-card"
+        "thinkingPatternImage": "think-2"
     ],
     [
-        "thinkingPatternTitle":"Shoulds",
-        "thinkingPatternImage": "orange-card"
+        "thinkingPatternTitle":"Black & White Thinking",
+        "thinkingPatternImage": "think-3"
     ],
     [
         "thinkingPatternTitle":"Future Telling",
-        "thinkingPatternImage": "orange-card"
+        "thinkingPatternImage": "think-4"
+    ],
+    [
+        "thinkingPatternTitle":"Shoulds",
+        "thinkingPatternImage": "think-5"
     ],
     [
         "thinkingPatternTitle":"All or Nothing",
-        "thinkingPatternImage": "orange-card"
+        "thinkingPatternImage": "think-6"
     ],
     [
         "thinkingPatternTitle":"Conclusions",
-        "thinkingPatternImage": "orange-card"
+        "thinkingPatternImage": "think-7"
     ]
 ]
 
 let gettingStarted = [
     [
         "introTitle":"About Melo",
-        "introImage": "blue-card",
+        "introImage": "intro-1",
         "introVideoURL": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/CheersToMe.mp3?alt=media&token=295e0fc1-2c8a-4f2e-b522-5b4264795873"
     ],
     [
-        "introTitle":"Being a good listener",
-        "introImage": "purple-card"
+        "introTitle":"Building Habits",
+        "introImage": "intro-2"
     ],
     [
-        "introTitle":"Building habits",
-        "introImage": "salmon-card"
+        "introTitle":"Being a good listener",
+        "introImage": "intro-3"
+    ]
+]
+
+let meloSessions = [
+    [
+        "sessionTitle":"Lotti",
+        "sessionImage": "Lotti",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Lillian",
+        "sessionImage": "Lillian",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Andrew",
+        "sessionImage": "Drew",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Elly",
+        "sessionImage": "Elly",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Sam",
+        "sessionImage": "Sam",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Nick",
+        "sessionImage": "Nick",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Vannessa",
+        "sessionImage": "Vannessa",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Julia",
+        "sessionImage": "Julia",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
+    ],
+    [
+        "sessionTitle":"Maria",
+        "sessionImage": "Maria",
+        "sessionVideo": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/Melo%20Sessions.mp4?alt=media&token=9105438c-4df7-432b-872f-e16dc70dcf65"
     ]
 ]

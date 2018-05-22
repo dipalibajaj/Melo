@@ -65,6 +65,8 @@
 		F3CA458920ACDFC2002CF03A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA458820ACDFC2002CF03A /* SettingsViewController.swift */; };
 		F3CA458B20AE41E8002CF03A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA458A20AE41E8002CF03A /* Settings.swift */; };
 		F3CA458D20AE4559002CF03A /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA458C20AE4559002CF03A /* SettingsTableViewCell.swift */; };
+		F3FADB6920B46CB900FF757A /* MeloSessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FADB6820B46CB900FF757A /* MeloSessionsViewController.swift */; };
+		F3FADB6B20B46D8000FF757A /* MeloSessionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FADB6A20B46D8000FF757A /* MeloSessionsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,8 @@
 		F3CA458820ACDFC2002CF03A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F3CA458A20AE41E8002CF03A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F3CA458C20AE4559002CF03A /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		F3FADB6820B46CB900FF757A /* MeloSessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloSessionsViewController.swift; sourceTree = "<group>"; };
+		F3FADB6A20B46D8000FF757A /* MeloSessionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloSessionsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,8 @@
 				F3764424209FDAF80074EFD3 /* GettingStartedCollectionViewCell.swift */,
 				F376441C209FCEDE0074EFD3 /* ThinkingPatternsViewController.swift */,
 				F376441E209FCF280074EFD3 /* ThinkingPatternsCollectionViewCell.swift */,
+				F3FADB6820B46CB900FF757A /* MeloSessionsViewController.swift */,
+				F3FADB6A20B46D8000FF757A /* MeloSessionsCollectionViewCell.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -315,8 +321,7 @@
 				F39018FB2093DDA70012BB33 /* New Note */,
 				F318C58C20AA4BC3007AB265 /* Profile */,
 				F3ABCD5920A933FB0057CC88 /* PresentViewPost.swift */,
-				F3CA458820ACDFC2002CF03A /* SettingsViewController.swift */,
-				F3CA458C20AE4559002CF03A /* SettingsTableViewCell.swift */,
+				F3FADB6C20B46F5100FF757A /* Settings */,
 				F379C80C2084F75E00FEC4B9 /* Assets.xcassets */,
 				F379C80E2084F75E00FEC4B9 /* LaunchScreen.storyboard */,
 				F304E7442088D1BF006268B8 /* Models */,
@@ -371,6 +376,15 @@
 				F376440E209CAE3A0074EFD3 /* CommentInputAccessoryView.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		F3FADB6C20B46F5100FF757A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F3CA458820ACDFC2002CF03A /* SettingsViewController.swift */,
+				F3CA458C20AE4559002CF03A /* SettingsTableViewCell.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,9 +633,11 @@
 				F3B6DE23208A340B00CBD719 /* MenuViewController.swift in Sources */,
 				F327327520A7D1040068B7A7 /* FirebaseUtils.swift in Sources */,
 				F3764423209FD0E80074EFD3 /* LearnData.swift in Sources */,
+				F3FADB6B20B46D8000FF757A /* MeloSessionsCollectionViewCell.swift in Sources */,
 				F30A3B4220915E8F00577633 /* LearnViewController.swift in Sources */,
 				F3764425209FDAF80074EFD3 /* GettingStartedCollectionViewCell.swift in Sources */,
 				F3B6DE2B208A575A00CBD719 /* LoginViewController.swift in Sources */,
+				F3FADB6920B46CB900FF757A /* MeloSessionsViewController.swift in Sources */,
 				F376441A209EB6A20074EFD3 /* ViewPostCollectionReusableView.swift in Sources */,
 				F318C58920AA4B86007AB265 /* ProfileCollectionReusableView.swift in Sources */,
 				F353ABF8209AB7ED00DA96F3 /* Comment.swift in Sources */,
