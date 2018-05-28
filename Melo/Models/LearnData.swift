@@ -17,30 +17,37 @@ let thinkingPatterns = [
     [
         "thinkingPatternTitle":"Filtering",
         "thinkingPatternImage": "think-1",
+        "thinkingAudioImage": "burgandy-bg"
     ],
     [
         "thinkingPatternTitle":"Personalization",
-        "thinkingPatternImage": "think-2"
+        "thinkingPatternImage": "think-2",
+        "thinkingAudioImage": "burgandy-bg"
     ],
     [
         "thinkingPatternTitle":"Black & White Thinking",
-        "thinkingPatternImage": "think-3"
+        "thinkingPatternImage": "think-3",
+        "thinkingAudioImage": "burgandy-bg"
     ],
     [
         "thinkingPatternTitle":"Future Telling",
-        "thinkingPatternImage": "think-4"
+        "thinkingPatternImage": "think-4",
+        "thinkingAudioImage": "burgandy-bg"
     ],
     [
         "thinkingPatternTitle":"Shoulds",
-        "thinkingPatternImage": "think-5"
+        "thinkingPatternImage": "think-5",
+        "thinkingAudioImage": "burgandy-bg"
     ],
     [
         "thinkingPatternTitle":"All or Nothing",
-        "thinkingPatternImage": "think-6"
+        "thinkingPatternImage": "think-6",
+        "thinkingAudioImage": "burgandy-bg"
     ],
     [
         "thinkingPatternTitle":"Conclusions",
-        "thinkingPatternImage": "think-7"
+        "thinkingPatternImage": "think-7",
+        "thinkingAudioImage": "burgandy-bg"
     ]
 ]
 
@@ -48,15 +55,20 @@ let gettingStarted = [
     [
         "introTitle":"About Melo",
         "introImage": "intro-1",
+        "introAudioImage": "salmon-bg",
         "introVideoURL": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/CheersToMe.mp3?alt=media&token=295e0fc1-2c8a-4f2e-b522-5b4264795873"
     ],
     [
         "introTitle":"Building Habits",
-        "introImage": "intro-2"
+        "introImage": "intro-2",
+        "introAudioImage": "purple-bg",
+        "introVideoURL": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/CheersToMe.mp3?alt=media&token=295e0fc1-2c8a-4f2e-b522-5b4264795873"
     ],
     [
         "introTitle":"Being a good listener",
-        "introImage": "intro-3"
+        "introImage": "intro-3",
+        "introAudioImage": "royal-blue-bg",
+        "introVideoURL": "https://firebasestorage.googleapis.com/v0/b/wearemeloapp.appspot.com/o/CheersToMe.mp3?alt=media&token=295e0fc1-2c8a-4f2e-b522-5b4264795873"
     ]
 ]
 

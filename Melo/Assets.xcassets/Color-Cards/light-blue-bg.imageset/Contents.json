@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "purple-card@1x.png",
+      "filename" : "light-blue-bg.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "purple-card@2x.png",
       "scale" : "2x"
     },
     {

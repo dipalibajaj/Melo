@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "blue-card-test.png",
+      "filename" : "salmon-bg.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "blue-card-test@2x.png",
       "scale" : "2x"
     },
     {

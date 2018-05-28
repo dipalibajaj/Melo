@@ -17,7 +17,7 @@ let settings = [
         "settingsTitle":"Need Help?"
     ],
     [
-        "settingsTitle":"Local Groups"
+        "settingsTitle":"Safety Net"
     ],
     [
         "settingsTitle":"Privacy Policy"

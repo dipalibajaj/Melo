@@ -53,6 +53,7 @@ class HomeViewController: UIViewController {
                     let hugCount = dict["hugCount"] as? Int,
                     let commentCount = dict["commentCount"] as? Int,
                     let draft = dict["draft"] as? Int
+                    
                     {
                         //print(hugCount)
                         //Setting up the time.

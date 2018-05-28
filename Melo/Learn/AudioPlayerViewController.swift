@@ -30,14 +30,14 @@ class AudioPlayerViewController: UIViewController {
         
         if tag == 1 {
             lessonTitle.text = introLesson["introTitle"]
-            lessonImageView.image = UIImage(named: introLesson["introImage"]!)
+            lessonImageView.image = UIImage(named: introLesson["introAudioImage"]!)
             let path = introLesson["introVideoURL"]!
             setupPlayerView(url: path)
         }
             
         else if tag == 2 {
             lessonTitle.text = thinkingPatternsLesson["thinkingPatternTitle"]
-            lessonImageView.image = UIImage(named: thinkingPatternsLesson["thinkingPatternImage"]!)
+            lessonImageView.image = UIImage(named: thinkingPatternsLesson["thinkingAudioImage"]!)
             //Insert path code here once audio files are set up.
         }
         
@@ -112,11 +112,13 @@ class AudioPlayerViewController: UIViewController {
     @IBAction func playButtonTapped(_ sender: Any) {
         if audioPlayer!.rate == 0 {
             audioPlayer?.play()
-            playButton.setTitle("Pause", for: .normal)
+            playButton.setImage(UIImage (named: "pause"), for: .normal)
+            //playButton.setTitle("Pause", for: .normal)
         }
         else {
             audioPlayer?.pause()
-            playButton.setTitle("Play", for: .normal)
+            playButton.setImage(UIImage (named: "play"), for: .normal)
+            //playButton.setTitle("Play", for: .normal)
         }
     }
     

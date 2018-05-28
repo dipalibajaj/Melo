@@ -230,7 +230,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rf-6i-9EM">
                                 <rect key="frame" x="0.0" y="87" width="375" height="427"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="How are you today?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C1a-H0-vZC">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C1a-H0-vZC">
                                         <rect key="frame" x="12" y="0.0" width="351" height="427"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -570,10 +570,16 @@
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVS-ny-JsK">
+                                                                            <rect key="frame" x="108" y="152" width="24" height="24"/>
+                                                                            <state key="normal" image="play-icon"/>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="ZCe-V1-ZER" firstAttribute="leading" secondItem="C2W-pl-Wv6" secondAttribute="leading" constant="8" id="1DI-rk-3i2"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="CVS-ny-JsK" secondAttribute="bottom" constant="8" id="56F-lJ-CyY"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="CVS-ny-JsK" secondAttribute="trailing" constant="8" id="B7V-ay-Z8g"/>
                                                                         <constraint firstAttribute="trailing" secondItem="ZCe-V1-ZER" secondAttribute="trailing" constant="8" id="Bnu-ZQ-FRG"/>
                                                                         <constraint firstAttribute="trailing" secondItem="7hV-g7-C1f" secondAttribute="trailing" id="CLy-Ru-DBH"/>
                                                                         <constraint firstAttribute="bottom" secondItem="7hV-g7-C1f" secondAttribute="bottom" id="PDY-cQ-UMY"/>
@@ -636,7 +642,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome to Melo! We've put together a few lessons to get you started." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3o-eb-MaX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="What makes you, you. Each thought you have revolves around your core belief." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3o-eb-MaX">
                                                 <rect key="frame" x="20" y="42" width="335" height="39"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -659,6 +665,10 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyN-mH-yND">
+                                                        <rect key="frame" x="108" y="152" width="24" height="24"/>
+                                                        <state key="normal" image="play-icon"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.2666666667" green="0.30588235289999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -666,21 +676,14 @@
                                                     <constraint firstItem="alO-GQ-A1F" firstAttribute="top" secondItem="sax-Mm-pcT" secondAttribute="top" id="Gnx-Lp-5x9"/>
                                                     <constraint firstAttribute="trailing" secondItem="H03-7i-g1r" secondAttribute="trailing" constant="8" id="LUl-cB-HVH"/>
                                                     <constraint firstAttribute="trailing" secondItem="alO-GQ-A1F" secondAttribute="trailing" id="OAC-Bf-lrV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="nyN-mH-yND" secondAttribute="bottom" constant="8" id="VdQ-tr-EFn"/>
                                                     <constraint firstAttribute="bottom" secondItem="alO-GQ-A1F" secondAttribute="bottom" id="jW3-Fg-mlX"/>
                                                     <constraint firstItem="alO-GQ-A1F" firstAttribute="leading" secondItem="sax-Mm-pcT" secondAttribute="leading" id="jkh-y1-xb3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nyN-mH-yND" secondAttribute="trailing" constant="8" id="kZr-ot-wws"/>
                                                     <constraint firstItem="H03-7i-g1r" firstAttribute="leading" secondItem="sax-Mm-pcT" secondAttribute="leading" constant="8" id="s1w-dW-PW0"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                                        <real key="value" value="0.10000000000000001"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="0.0" height="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
                                                         <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -803,14 +806,14 @@
             <objects>
                 <viewController title="AudioPlayerViewController" id="B0f-IT-Tyh" customClass="AudioPlayerViewController" customModule="Melo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iRp-9n-bKW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-card" translatesAutoresizingMaskIntoConstraints="NO" id="zgL-23-EmX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="royal-blue-bg" translatesAutoresizingMaskIntoConstraints="NO" id="zgL-23-EmX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
                             </imageView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQQ-uC-0Qe">
-                                <rect key="frame" x="325" y="50" width="28" height="28"/>
+                                <rect key="frame" x="325" y="30" width="28" height="28"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OLL-jp-Ed2">
                                     <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -854,25 +857,23 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Being a good listener" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeL-DR-UNM">
-                                <rect key="frame" x="34" y="110" width="307" height="95.5"/>
+                                <rect key="frame" x="34" y="90" width="307" height="95.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GU-zT-h4H">
-                                <rect key="frame" x="260.5" y="325.5" width="68.5" height="36"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <state key="normal" title="Forward">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GU-zT-h4H">
+                                <rect key="frame" x="254.5" y="141.5" width="74.5" height="27"/>
+                                <state key="normal" image="forward">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="forwardButtonTapped:" destination="B0f-IT-Tyh" eventType="touchUpInside" id="ohM-Gb-e7U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo2-Vd-NmX">
-                                <rect key="frame" x="62" y="325.5" width="59" height="36"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <state key="normal" title="Rewind">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo2-Vd-NmX">
+                                <rect key="frame" x="62" y="141.5" width="39" height="27"/>
+                                <state key="normal" image="backward">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -880,7 +881,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9wN-r0-5NT">
-                                <rect key="frame" x="32" y="537" width="311" height="31"/>
+                                <rect key="frame" x="32" y="180" width="311" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.53705033445277783" green="0.72549019609999998" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.68627450980000004" green="0.72549019609999998" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="1" green="0.94901960780000005" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -888,10 +889,9 @@
                                     <action selector="animateSlider:" destination="B0f-IT-Tyh" eventType="valueChanged" id="hv1-wT-QtC"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVY-QW-kKs">
-                                <rect key="frame" x="163.5" y="325.5" width="48" height="36"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <state key="normal" title="Pause">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVY-QW-kKs">
+                                <rect key="frame" x="170.5" y="136" width="35" height="38"/>
+                                <state key="normal" image="pause">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -899,13 +899,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwc-44-CNk">
-                                <rect key="frame" x="305" y="575" width="36" height="19.5"/>
+                                <rect key="frame" x="305" y="218" width="36" height="19.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSP-Q2-mTh">
-                                <rect key="frame" x="34" y="572.5" width="36" height="19.5"/>
+                                <rect key="frame" x="34" y="215.5" width="36" height="19.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1474,7 +1474,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome to Melo! We've put together a few lessons to get you started." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vie-Sk-s14">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="We think in patterns, and how we think influences how we behave. Learn how to catch them!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vie-Sk-s14">
                                 <rect key="frame" x="20" y="42" width="335" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -1514,16 +1514,22 @@
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vG-p8-RaQ">
+                                                            <rect key="frame" x="108" y="152" width="24" height="24"/>
+                                                            <state key="normal" image="play-icon"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="E3s-dn-WaF" secondAttribute="bottom" id="5Sj-2C-El5"/>
                                                         <constraint firstItem="E3s-dn-WaF" firstAttribute="leading" secondItem="74a-6e-Uj8" secondAttribute="leading" id="ETW-Oy-IDl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8vG-p8-RaQ" secondAttribute="trailing" constant="8" id="JlL-yt-0Oh"/>
                                                         <constraint firstAttribute="trailing" secondItem="Izy-z4-Y21" secondAttribute="trailing" constant="8" id="MAx-C7-IRM"/>
                                                         <constraint firstItem="Izy-z4-Y21" firstAttribute="leading" secondItem="74a-6e-Uj8" secondAttribute="leading" constant="8" id="VBq-zu-GQM"/>
                                                         <constraint firstItem="Izy-z4-Y21" firstAttribute="top" secondItem="74a-6e-Uj8" secondAttribute="top" constant="8" id="Vuo-fl-7Sk"/>
                                                         <constraint firstAttribute="trailing" secondItem="E3s-dn-WaF" secondAttribute="trailing" id="X9E-SC-rSw"/>
                                                         <constraint firstItem="E3s-dn-WaF" firstAttribute="top" secondItem="74a-6e-Uj8" secondAttribute="top" id="gE7-U6-bxf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="8vG-p8-RaQ" secondAttribute="bottom" constant="8" id="iBT-vl-wg6"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1594,7 +1600,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome to Melo! We've put together a few lessons to get you started." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnZ-Gm-1F7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Hear stories about life's struggles and happy moments from the Melo community." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnZ-Gm-1F7">
                                 <rect key="frame" x="20" y="42" width="335" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -1649,6 +1655,10 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hO3-jc-Ib7">
+                                                    <rect key="frame" x="108" y="152" width="24" height="24"/>
+                                                    <state key="normal" image="play-icon"/>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -1660,9 +1670,11 @@
                                             <constraint firstAttribute="bottom" secondItem="gnA-10-cnc" secondAttribute="bottom" id="SML-6U-2qf"/>
                                             <constraint firstAttribute="bottom" secondItem="THu-Wd-ArG" secondAttribute="bottom" id="Sw8-Ua-jM3"/>
                                             <constraint firstItem="QXv-fv-c7w" firstAttribute="top" secondItem="WwA-Wm-roS" secondAttribute="top" constant="8" id="Vm9-we-zQf"/>
+                                            <constraint firstAttribute="trailing" secondItem="hO3-jc-Ib7" secondAttribute="trailing" constant="8" id="axZ-b0-q1f"/>
                                             <constraint firstAttribute="trailing" secondItem="gnA-10-cnc" secondAttribute="trailing" id="bEl-M9-Svf"/>
                                             <constraint firstAttribute="trailing" secondItem="THu-Wd-ArG" secondAttribute="trailing" id="cx5-zx-XPc"/>
                                             <constraint firstItem="THu-Wd-ArG" firstAttribute="leading" secondItem="WwA-Wm-roS" secondAttribute="leading" id="k1P-2N-oAY"/>
+                                            <constraint firstAttribute="bottom" secondItem="hO3-jc-Ib7" secondAttribute="bottom" constant="8" id="vHO-4s-0iM"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="sessionImage" destination="THu-Wd-ArG" id="eDg-re-eww"/>
@@ -1700,10 +1712,11 @@
         <image name="CANCEL" width="12" height="12"/>
         <image name="Change_emotion" width="8" height="4"/>
         <image name="Logo/melo-white" width="692" height="224"/>
-        <image name="blue-card" width="106" height="140"/>
+        <image name="backward" width="39" height="27"/>
         <image name="core-2" width="184" height="185"/>
         <image name="feed-icon" width="26" height="26"/>
         <image name="feed-icon-active" width="26" height="26"/>
+        <image name="forward" width="39" height="27"/>
         <image name="learn-icon" width="32" height="23"/>
         <image name="learn-icon-active" width="32" height="23"/>
         <image name="new-note-active" width="25" height="25"/>
@@ -1712,15 +1725,18 @@
         <image name="notification-icon" width="23" height="26"/>
         <image name="notification-icon-active" width="23" height="26"/>
         <image name="notification-illustration" width="375" height="812"/>
+        <image name="pause" width="35" height="38"/>
+        <image name="play-icon" width="24" height="24"/>
         <image name="profile-icon" width="26" height="25"/>
         <image name="profile-icon-active" width="26" height="25"/>
+        <image name="royal-blue-bg" width="497" height="907"/>
         <image name="settings-icon" width="25" height="26"/>
         <image name="think-4" width="140" height="184"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="I9n-Ut-VtL"/>
         <segue reference="tob-JM-VOO"/>
-        <segue reference="cCI-Da-Ifl"/>
+        <segue reference="FhL-pN-gK7"/>
         <segue reference="0R1-wW-gGZ"/>
     </inferredMetricsTieBreakers>
 </document>

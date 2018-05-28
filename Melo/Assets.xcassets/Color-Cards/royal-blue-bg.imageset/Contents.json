@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "blue-card@1x.png",
+      "filename" : "royal-blue-bg.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "blue-card@2x.png",
       "scale" : "2x"
     },
     {

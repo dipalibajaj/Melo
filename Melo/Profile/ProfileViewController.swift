@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController {
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
         
-    profileCollectionView.register(UINib.init(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "postCollectionCell")
+       profileCollectionView.register(UINib.init(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "postCollectionCell")
        profileCollectionView.register(UINib(nibName: "ProfileCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: "profileHeader")
         
         observePosts()
